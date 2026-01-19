@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#specifies">
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#specifiedBy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#servesAsEvidenceFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#evidencedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/ImagingModality">
+    <rdfs:label>Imaging modality</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/AIModel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>AI model</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#governsProduct">
+    <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/governedBy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/is_a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/AIApplication">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>AI application</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Product">
+    <rdfs:label>Product</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics-unified">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/has_part">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#PolicyDomain">
+    <rdfs:label>Policy domain</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

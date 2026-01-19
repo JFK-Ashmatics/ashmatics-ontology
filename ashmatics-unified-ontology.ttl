@@ -1,0 +1,37 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://asherinformatics.com/ontology/ashmatics-unified> a owl:Ontology .
+
+<http://asherinformatics.com/ontology/ashmatics/AIApplication> a owl:Class ;
+    rdfs:label "AI application" .
+
+<http://asherinformatics.com/ontology/ashmatics/AIModel> a owl:Class ;
+    rdfs:label "AI model" .
+
+<http://asherinformatics.com/ontology/ashmatics/ImagingModality> a owl:Class ;
+    rdfs:label "Imaging modality" .
+
+<http://asherinformatics.com/ontology/ashmatics/Product> a owl:Class ;
+    rdfs:label "Product" .
+
+<http://asherinformatics.com/ontology/ashmatics/has_part> a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    owl:inverseOf <http://asherinformatics.com/ontology/ashmatics/part_of> .
+
+<http://asherinformatics.com/ontology/ashmatics/is_a> a owl:ObjectProperty ;
+    rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing .
+
+<https://ashmatics.com/ontology/cai#PolicyDomain> a owl:Class ;
+    rdfs:label "Policy domain" .
+
+<https://ashmatics.com/ontology/cai#governsProduct> a owl:ObjectProperty ;
+    owl:inverseOf <http://asherinformatics.com/ontology/ashmatics/governedBy> .
+
+<https://ashmatics.com/ontology/cai#servesAsEvidenceFor> a owl:ObjectProperty ;
+    owl:inverseOf <https://ashmatics.com/ontology/cai#evidencedBy> .
+
+<https://ashmatics.com/ontology/cai#specifies> a owl:ObjectProperty ;
+    owl:inverseOf <https://ashmatics.com/ontology/cai#specifiedBy> .
+
