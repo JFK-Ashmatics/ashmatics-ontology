@@ -1,0 +1,62 @@
+{
+  "@context": "https://raw.githubusercontent.com/JFK-Ashmatics/ashmatics-ontology/main/ashmatics-unified-ontology-shared.jsonld",
+  "@id": "http://asherinformatics.com/ontology/ashmatics-unified",
+  "@type": "owl:Ontology",
+  "@graph": [
+    {
+      "@id": "ash:Product",
+      "@type": "owl:Class",
+      "rdfs:label": "Product"
+    },
+    {
+      "@id": "ash:AIApplication",
+      "@type": "owl:Class",
+      "rdfs:label": "AI application"
+    },
+    {
+      "@id": "ash:AIModel",
+      "@type": "owl:Class",
+      "rdfs:label": "AI model"
+    },
+    {
+      "@id": "ash:ImagingModality",
+      "@type": "owl:Class",
+      "rdfs:label": "Imaging modality"
+    },
+    {
+      "@id": "ashcai:PolicyDomain",
+      "@type": "owl:Class",
+      "rdfs:label": "Policy domain"
+    },
+
+    {
+      "@id": "ashcai:governsProduct",
+      "@type": "owl:ObjectProperty",
+      "owl:inverseOf": { "@id": "ash:governedBy" }
+    },
+    {
+      "@id": "ash:is_a",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": { "@id": "owl:Thing" },
+      "rdfs:range": { "@id": "owl:Thing" }
+    },
+    {
+      "@id": "ash:has_part",
+      "@type": "owl:ObjectProperty",
+      "owl:inverseOf": { "@id": "ash:part_of" },
+      "rdf:type": { "@id": "owl:TransitiveProperty" }
+    },
+    {
+      "@id": "ashcai:specifies",
+      "@type": "owl:ObjectProperty",
+      "owl:inverseOf": { "@id": "ashcai:specifiedBy" }
+    },
+    {
+      "@id": "ashcai:servesAsEvidenceFor",
+      "@type": "owl:ObjectProperty",
+      "owl:inverseOf": { "@id": "ashcai:evidencedBy" }
+    }
+  ]
+}
+
+
