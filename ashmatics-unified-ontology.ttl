@@ -1,20 +1,23 @@
 @prefix ash: <http://asherinformatics.com/ontology/ashmatics/> .
 @prefix ashcai: <https://ashmatics.com/ontology/cai#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix p-plan: <http://purl.org/net/p-plan#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://asherinformatics.com/ontology/ashmatics-unified> a owl:Ontology ;
     rdfs:label "AshMatics Unified Ontology" ;
-    rdfs:comment "ASH (Domain) + ASHCAI (Governance) - Medical Imaging AI Ontology" ;
-    owl:versionInfo "1.0.0" .
+    dcterms:created "2026-01-19" ;
+    rdfs:comment "ASH (Domain) + ASHCAI (Governance) - Clinical AI Governance Framework Ontology" ;
+    owl:imports <http://www.w3.org/ns/prov-o#> ;
+    owl:versionInfo "2.0.0" .
 
 ash:2Dimages a owl:Class ;
     rdfs:label "2D images" ;
     ash:classId "ASH0003010" ;
-    ash:hasSemanticType ash:SemanticType_T9102 ;
-    ash:status "active" ;
+    rdfs:subClassOf ash:SemanticType_T9102 ;
     skos:altLabel "2D image",
         "Two-dimensional images" ;
     skos:definition "Input data type: 2D Images" .
@@ -22,27 +25,16 @@ ash:2Dimages a owl:Class ;
 ash:3Dvolumes a owl:Class ;
     rdfs:label "3D volumes" ;
     ash:classId "ASH0003011" ;
-    ash:hasSemanticType ash:SemanticType_T9102 ;
-    ash:status "active" ;
+    rdfs:subClassOf ash:SemanticType_T9102 ;
     skos:altLabel "3D volume",
         "Three-dimensional volumes" ;
     skos:definition "Input data type: 3D Volumes" .
 
-ash:AIapplication a owl:Class ;
-    rdfs:label "AI application" ;
-    ash:classId "ASH0001002" ;
-    ash:hasSemanticType ash:SemanticType_T9105 ;
-    ash:status "active" ;
-    skos:altLabel "AI App",
-        "AI Tool" ;
-    skos:definition "A specific application of AI technology that performs a defined function" .
-
 ash:CEmarked a owl:Class ;
     rdfs:label "CE marked" ;
     ash:classId "ASH0002011" ;
-    ash:hasSemanticType ash:SemanticType_T9103 ;
-    ash:status "active" ;
-    rdfs:subClassOf ash:Regulatorystatus ;
+    rdfs:subClassOf ash:Regulatorystatus,
+        ash:SemanticType_T9103 ;
     skos:altLabel "CE-marked",
         "European approved" ;
     skos:definition "Model performance: CE-Marked" .
@@ -50,155 +42,120 @@ ash:CEmarked a owl:Class ;
 ash:Class1 a owl:Class ;
     rdfs:label "Class 1" ;
     ash:classId "ASH0005001" ;
-    ash:hasSemanticType ash:SemanticType_T9104 ;
-    ash:status "active" ;
-    rdfs:subClassOf ash:Deviceclass ;
+    rdfs:subClassOf ash:Deviceclass,
+        ash:SemanticType_T9104 ;
     skos:altLabel "Class I" ;
     skos:definition "Device classification: Class I" .
 
 ash:Class2 a owl:Class ;
     rdfs:label "Class 2" ;
     ash:classId "ASH0005002" ;
-    ash:hasSemanticType ash:SemanticType_T9104 ;
-    ash:status "active" ;
-    rdfs:subClassOf ash:Deviceclass ;
+    rdfs:subClassOf ash:Deviceclass,
+        ash:SemanticType_T9104 ;
     skos:altLabel "Class II" ;
     skos:definition "Device classification: Class II" .
 
 ash:Class3 a owl:Class ;
     rdfs:label "Class 3" ;
     ash:classId "ASH0005003" ;
-    ash:hasSemanticType ash:SemanticType_T9104 ;
-    ash:status "active" ;
-    rdfs:subClassOf ash:Deviceclass ;
+    rdfs:subClassOf ash:Deviceclass,
+        ash:SemanticType_T9104 ;
     skos:altLabel "Class III" ;
     skos:definition "Device classification: Class III" .
 
 ash:Classification a owl:Class ;
     rdfs:label "Classification" ;
     ash:classId "ASH0003001" ;
-    ash:hasSemanticType ash:SemanticType_T9101 ;
-    ash:status "active" ;
-    rdfs:subClassOf ash:AImodel ;
+    rdfs:subClassOf ash:AImodel,
+        ash:SemanticType_T9101 ;
     skos:definition "Model type: Classification" .
 
 ash:Commercialstatus a owl:Class ;
     rdfs:label "Commercial status" ;
     ash:classId "ASH0001006" ;
-    ash:hasSemanticType ash:SemanticType_T9103 ;
-    ash:status "active" ;
+    rdfs:subClassOf ash:SemanticType_T9103 ;
     skos:definition "The commercial status of an AI Application" .
 
 ash:Detection a owl:Class ;
     rdfs:label "Detection" ;
     ash:classId "ASH0003003" ;
-    ash:hasSemanticType ash:SemanticType_T9101 ;
-    ash:status "active" ;
-    rdfs:subClassOf ash:AImodel ;
+    rdfs:subClassOf ash:AImodel,
+        ash:SemanticType_T9101 ;
     skos:definition "Model type: Detection" .
 
 ash:Diagnostic a owl:Class ;
     rdfs:label "Diagnostic" ;
     ash:classId "ASH0004001" ;
-    ash:hasSemanticType ash:SemanticType_T9105 ;
-    ash:status "active" ;
-    rdfs:subClassOf ash:Clinicalapplication ;
+    rdfs:subClassOf ash:Clinicalapplication,
+        ash:SemanticType_T9105 ;
     skos:definition "Clinical application: Diagnostic" .
 
 ash:FDAcleared a owl:Class ;
     rdfs:label "FDA cleared" ;
     ash:classId "ASH0002010" ;
-    ash:hasSemanticType ash:SemanticType_T9103 ;
-    ash:status "active" ;
-    rdfs:subClassOf ash:Regulatorystatus ;
+    rdfs:subClassOf ash:Regulatorystatus,
+        ash:SemanticType_T9103 ;
     skos:altLabel "FDA approved",
         "FDA-cleared" ;
     skos:definition "Model performance: FDA-Cleared" .
 
-ash:Imagingmodality a owl:Class ;
-    rdfs:label "Imaging modality" ;
-    ash:classId "ASH0001004" ;
-    ash:hasSemanticType ash:SemanticType_T9001 ;
-    ash:status "active" ;
-    skos:definition "The type of data acquisition technology used (e.g., MRI, CT, X-ray)" .
-
 ash:Monitoring a owl:Class ;
     rdfs:label "Monitoring" ;
     ash:classId "ASH0004003" ;
-    ash:hasSemanticType ash:SemanticType_T9105 ;
-    ash:status "active" ;
-    rdfs:subClassOf ash:Clinicalapplication ;
+    rdfs:subClassOf ash:Clinicalapplication,
+        ash:SemanticType_T9105 ;
     skos:definition "Clinical application: Monitoring" .
-
-ash:Product a owl:Class ;
-    rdfs:label "Product" ;
-    ash:classId "ASH0001001" ;
-    ash:hasSemanticType ash:SemanticType_T9106 ;
-    ash:status "active" ;
-    skos:definition "A commercial offering in the medical imaging ecosystem" .
 
 ash:Screening a owl:Class ;
     rdfs:label "Screening" ;
     ash:classId "ASH0004002" ;
-    ash:hasSemanticType ash:SemanticType_T9105 ;
-    ash:status "active" ;
-    rdfs:subClassOf ash:Clinicalapplication ;
+    rdfs:subClassOf ash:Clinicalapplication,
+        ash:SemanticType_T9105 ;
     skos:definition "Clinical application: Screening" .
 
 ash:Segmentation a owl:Class ;
     rdfs:label "Segmentation" ;
     ash:classId "ASH0003002" ;
-    ash:hasSemanticType ash:SemanticType_T9101 ;
-    ash:status "active" ;
-    rdfs:subClassOf ash:AImodel ;
+    rdfs:subClassOf ash:AImodel,
+        ash:SemanticType_T9101 ;
     skos:definition "Model type: Segmentation" .
 
 ash:SemanticType_T017 a owl:Class ;
     rdfs:label "AnatomicStructure" ;
-    ash:typeId "T017" ;
-    ash:umlsEquivalent true ;
-    skos:definition "Body structure or anatomical region" ;
-    skos:exactMatch "UMLS:T017" .
+    rdfs:subClassOf skos:Concept ;
+    skos:definition "Body structure or anatomical region" .
 
 ash:SemanticType_T047 a owl:Class ;
     rdfs:label "DiseaseOrSyndrome" ;
-    ash:typeId "T047" ;
-    ash:umlsEquivalent true ;
-    skos:definition "Disease or pathologic condition" ;
-    skos:exactMatch "UMLS:T047" .
+    rdfs:subClassOf skos:Concept ;
+    skos:definition "Disease or pathologic condition" .
 
 ash:SemanticType_T061 a owl:Class ;
     rdfs:label "TherapeuticOrPreventiveProcedure" ;
-    ash:typeId "T061" ;
-    ash:umlsEquivalent true ;
-    skos:definition "Treatment or prevention procedures" ;
-    skos:exactMatch "UMLS:T061" .
+    rdfs:subClassOf skos:Concept ;
+    skos:definition "Treatment or prevention procedures" .
 
 ash:SemanticType_T9002 a owl:Class ;
     rdfs:label "ClinicalSpecialty" ;
-    ash:typeId "T9002" ;
-    skos:definition "Medical specialty domains" ;
-    skos:exactMatch "SNOMED:394658006" .
+    rdfs:subClassOf skos:Concept ;
+    skos:definition "Medical specialty domains" .
 
 ash:SemanticType_T9003 a owl:Class ;
     rdfs:label "SiteOfCare" ;
-    ash:typeId "T9003" ;
-    ash:umlsEquivalent true ;
-    rdfs:subClassOf ash:SemanticType_T093 ;
-    skos:definition "Healthcare environment context" ;
-    skos:exactMatch "SNOMED:43741000" .
+    rdfs:subClassOf ash:SemanticType_T093,
+        skos:Concept ;
+    skos:definition "Healthcare environment context" .
 
 ash:SemanticType_T9201 a owl:Class ;
     rdfs:label "RelationshipType" ;
-    ash:typeId "T9201" ;
+    rdfs:subClassOf skos:Concept ;
     skos:definition "Type of relationship between two entities" .
 
 ash:Treatmentplanning a owl:Class ;
     rdfs:label "Treatment planning" ;
     ash:classId "ASH0004004" ;
-    ash:hasSemanticType ash:SemanticType_T9105 ;
-    ash:status "active" ;
-    rdfs:subClassOf ash:Clinicalapplication ;
+    rdfs:subClassOf ash:Clinicalapplication,
+        ash:SemanticType_T9105 ;
     skos:definition "Clinical application: Treatment Planning" .
 
 ash:contradicts a owl:ObjectProperty,
@@ -212,286 +169,243 @@ ash:equivalent_to a owl:ObjectProperty,
     rdfs:label "equivalent_to" ;
     skos:definition "A relationship indicating that two entities have the same meaning or refer to the same concept." .
 
-ash:governedBy a owl:ObjectProperty ;
-    rdfs:label "governed by" ;
-    owl:inverseOf ashcai:governsProduct .
-
 ash:related_to a owl:ObjectProperty,
         owl:SymmetricProperty ;
     rdfs:label "related_to" ;
     skos:definition "A general relationship indicating that two entities are connected or associated in some way." .
 
-ashcai:AIManagementSystem a owl:Class ;
-    rdfs:label "AIManagementSystem" ;
-    skos:definition "AI Management System instance" .
-
-ashcai:AuditEvidence a owl:Class ;
-    rdfs:label "AuditEvidence" ;
-    skos:definition "Evidence for audit purposes" .
-
-ashcai:BasePractice a owl:Class ;
-    rdfs:label "BasePractice" ;
-    skos:definition "Fundamental practice for AI governance" .
-
-ashcai:ControlAssessment a owl:Class ;
-    rdfs:label "ControlAssessment" ;
-    skos:definition "Assessment of a control" .
-
-ashcai:ExemplarControl a owl:Class ;
-    rdfs:label "ExemplarControl" ;
-    skos:definition "Example control for compliance" .
-
-ashcai:GovernanceFramework a owl:Class ;
-    rdfs:label "GovernanceFramework" ;
-    skos:definition "Framework for AI governance policies and processes" .
-
-ashcai:ISOControl a owl:Class ;
-    rdfs:label "ISOControl" ;
-    skos:definition "Control mapped to ISO standards" .
+prov:Agent a owl:Class ;
+    rdfs:label "prov:Agent" ;
+    rdfs:comment "W3C PROV-O Agent" .
 
 ashcai:OverviewSummary a owl:Class ;
-    rdfs:label "OverviewSummary" ;
-    skos:definition "Summary overview document" .
-
-ashcai:PolicyDocument a owl:Class ;
-    rdfs:label "PolicyDocument" ;
-    skos:definition "Instantiated policy document" .
-
-ashcai:PolicyDomain a owl:Class ;
-    rdfs:label "PolicyDomain" ;
-    skos:definition "Domain of policies governing AI systems" .
+    rdfs:label "Overview Summary" ;
+    rdfs:subClassOf prov:Entity ;
+    skos:definition "Domain overview summary document" .
 
 ashcai:PolicyTemplate a owl:Class ;
-    rdfs:label "PolicyTemplate" ;
-    skos:definition "Template for policy documents" .
-
-ashcai:ProcessDomain a owl:Class ;
-    rdfs:label "ProcessDomain" ;
-    skos:definition "Domain of processes for AI lifecycle management" .
-
-ashcai:ProcessOutput a owl:Class ;
-    rdfs:label "ProcessOutput" ;
-    skos:definition "Output produced by a governance process" .
-
-ashcai:RegulatoryCategory a owl:Class ;
-    rdfs:label "RegulatoryCategory" ;
-    skos:definition "Category of regulatory requirements" .
-
-ashcai:RegulatoryFramework a owl:Class ;
-    rdfs:label "RegulatoryFramework" ;
-    skos:definition "Regulatory framework (FDA, CE, etc.)" .
-
-ashcai:RegulatoryFunction a owl:Class ;
-    rdfs:label "RegulatoryFunction" ;
-    skos:definition "Function within a regulatory framework" .
-
-ashcai:RegulatoryRequirement a owl:Class ;
-    rdfs:label "RegulatoryRequirement" ;
-    skos:definition "Specific regulatory requirement" .
-
-ashcai:SOPExecution a owl:Class ;
-    rdfs:label "SOPExecution" ;
-    skos:definition "Execution record of an SOP" .
-
-ashcai:SOPTemplate a owl:Class ;
-    rdfs:label "SOPTemplate" ;
-    skos:definition "Standard Operating Procedure template" .
-
-ashcai:Tool a owl:Class ;
-    rdfs:label "Tool" ;
-    skos:definition "Tool used in governance processes" .
+    rdfs:label "Policy Template" ;
+    rdfs:subClassOf p-plan:Variable ;
+    skos:definition "Tokenized policy document template" .
 
 ashcai:WizardQuestion a owl:Class ;
-    rdfs:label "WizardQuestion" ;
-    skos:definition "Question in a compliance wizard" .
+    rdfs:label "Wizard Question" ;
+    rdfs:subClassOf prov:Entity ;
+    skos:definition "Assessment question for evaluating compliance with a requirement" .
 
-ashcai:WorkProduct a owl:Class ;
-    rdfs:label "WorkProduct" ;
-    skos:definition "Produced work product" .
-
-ashcai:WorkProductTemplate a owl:Class ;
-    rdfs:label "WorkProductTemplate" ;
-    skos:definition "Template for work products" .
-
-ashcai:addresses a owl:ObjectProperty ;
-    rdfs:label "addresses" ;
-    owl:inverseOf ashcai:addressedBy ;
-    skos:definition "Addresses a requirement" .
+ashcai:addressedBy a owl:ObjectProperty ;
+    rdfs:label "addressed by" ;
+    rdfs:domain ashcai:RegulatoryRequirement ;
+    rdfs:range ashcai:PolicyDomain ;
+    owl:inverseOf ashcai:addresses ;
+    skos:definition "Regulatory requirement is addressed by policy domain" .
 
 ashcai:appliesTo a owl:ObjectProperty ;
-    rdfs:label "appliesTo" ;
-    skos:definition "Control applies to an application" .
+    rdfs:label "applies to" ;
+    rdfs:domain ashcai:ExemplarControl ;
+    rdfs:range ash:AIapplication ;
+    owl:inverseOf ash:hasGovernanceRequirement ;
+    skos:definition "Control/requirement applies to AI application" .
 
 ashcai:assesses a owl:ObjectProperty ;
     rdfs:label "assesses" ;
-    skos:definition "Assesses a control" .
-
-ashcai:basedOn a owl:ObjectProperty ;
-    rdfs:label "basedOn" ;
-    skos:definition "Based on another element" .
+    rdfs:domain ashcai:ControlAssessment ;
+    rdfs:range ashcai:ExemplarControl ;
+    skos:definition "Control assessment assesses a control" .
 
 ashcai:composedInto a owl:ObjectProperty ;
-    rdfs:label "composedInto" ;
+    rdfs:label "composed into" ;
+    rdfs:domain ashcai:WorkProductTemplate ;
+    rdfs:range ashcai:ProcessOutput ;
     owl:inverseOf ashcai:composedFrom ;
-    skos:definition "Composed into a larger element" .
-
-ashcai:contains a owl:ObjectProperty ;
-    rdfs:label "contains" ;
-    owl:inverseOf ashcai:partOfAIMS ;
-    skos:definition "Contains an element" .
-
-ashcai:containsBasePractice a owl:ObjectProperty ;
-    rdfs:label "containsBasePractice" ;
-    owl:inverseOf ashcai:belongsToProcessDomain ;
-    skos:definition "Contains a base practice" .
+    skos:definition "Work products are composed into process output" .
 
 ashcai:coversProducts a owl:ObjectProperty ;
-    rdfs:label "coversProducts" ;
-    skos:definition "AIMS covers products" .
+    rdfs:label "covers products" ;
+    rdfs:domain ashcai:AIManagementSystem ;
+    rdfs:range ash:Product ;
+    skos:definition "AIMS covers products/applications" .
+
+ashcai:derivedInto a owl:ObjectProperty ;
+    rdfs:label "derived into" ;
+    rdfs:domain ashcai:WorkProduct ;
+    rdfs:range ashcai:AuditEvidence ;
+    owl:inverseOf ashcai:derivedFrom ;
+    skos:definition "Work product is derived into audit evidence" .
+
+ashcai:excludes a owl:ObjectProperty ;
+    rdfs:label "excludes" ;
+    rdfs:domain ashcai:AIManagementSystem ;
+    rdfs:range ashcai:PolicyDomain ;
+    skos:definition "AIMS excludes a policy domain" .
 
 ashcai:executionOf a owl:ObjectProperty ;
-    rdfs:label "executionOf" ;
-    skos:definition "Execution of a template" .
+    rdfs:label "execution of" ;
+    rdfs:domain ashcai:SOPExecution ;
+    rdfs:range ashcai:SOPTemplate ;
+    skos:definition "SOP execution is execution of SOP template" .
 
 ashcai:forAIApplication a owl:ObjectProperty ;
-    rdfs:label "forAIApplication" ;
-    skos:definition "For a specific AI application" .
+    rdfs:label "for AI application" ;
+    rdfs:domain ashcai:WorkProduct ;
+    rdfs:range ash:AIapplication ;
+    skos:definition "Work product for specific AI application" .
 
 ashcai:forAIModel a owl:ObjectProperty ;
-    rdfs:label "forAIModel" ;
-    skos:definition "For a specific AI model" .
+    rdfs:label "for AI model" ;
+    rdfs:domain ashcai:WorkProduct ;
+    rdfs:range ash:AImodel ;
+    skos:definition "Work product for specific AI model" .
+
+ashcai:governsProduct a owl:ObjectProperty ;
+    rdfs:label "governs product" ;
+    rdfs:domain ashcai:PolicyDomain ;
+    rdfs:range ash:Product ;
+    owl:inverseOf ash:governedBy ;
+    skos:definition "Policy domain governs ASH product/application" .
 
 ashcai:hasCategory a owl:ObjectProperty ;
-    rdfs:label "hasCategory" ;
+    rdfs:label "has category" ;
+    rdfs:domain ashcai:RegulatoryFunction ;
+    rdfs:range ashcai:RegulatoryCategory ;
     owl:inverseOf ashcai:partOfFunction ;
-    skos:definition "Has a category" .
+    skos:definition "Function has category" .
 
 ashcai:hasFunction a owl:ObjectProperty ;
-    rdfs:label "hasFunction" ;
+    rdfs:label "has function" ;
+    rdfs:domain ashcai:RegulatoryFramework ;
+    rdfs:range ashcai:RegulatoryFunction ;
     owl:inverseOf ashcai:partOfFramework ;
-    skos:definition "Has a regulatory function" .
-
-ashcai:hasInstance a owl:ObjectProperty ;
-    rdfs:label "hasInstance" ;
-    owl:inverseOf ashcai:instantiatedFrom ;
-    skos:definition "Has an instance" .
-
-ashcai:hasOverviewSummary a owl:ObjectProperty ;
-    rdfs:label "hasOverviewSummary" ;
-    owl:inverseOf ashcai:summarizes ;
-    skos:definition "Has an overview summary" .
+    skos:definition "Framework has function" .
 
 ashcai:hasRequirement a owl:ObjectProperty ;
-    rdfs:label "hasRequirement" ;
+    rdfs:label "has requirement" ;
+    rdfs:domain ashcai:RegulatoryCategory ;
+    rdfs:range ashcai:RegulatoryRequirement ;
     owl:inverseOf ashcai:partOfCategory ;
-    skos:definition "Has a requirement" .
+    skos:definition "Category has requirement" .
 
 ashcai:hasSubRequirement a owl:ObjectProperty ;
-    rdfs:label "hasSubRequirement" ;
+    rdfs:label "has sub-requirement" ;
+    rdfs:domain ashcai:RegulatoryRequirement ;
+    rdfs:range ashcai:RegulatoryRequirement ;
     owl:inverseOf ashcai:parentRequirement ;
-    skos:definition "Has a sub-requirement" .
+    skos:definition "Requirement has sub-requirement" .
 
-ashcai:hasTemplate a owl:ObjectProperty ;
-    rdfs:label "hasTemplate" ;
-    owl:inverseOf ashcai:templateFor ;
-    skos:definition "Has a template" .
+ashcai:implementedThrough a owl:ObjectProperty ;
+    rdfs:label "implemented through" ;
+    rdfs:domain ashcai:RegulatoryRequirement ;
+    rdfs:range ashcai:ExemplarControl ;
+    owl:inverseOf ashcai:implements ;
+    skos:definition "Requirement is implemented through control" .
 
-ashcai:implements a owl:ObjectProperty ;
-    rdfs:label "implements" ;
-    owl:inverseOf ashcai:implementedThrough ;
-    skos:definition "Implements a specification" .
+ashcai:instantiatedFrom a owl:ObjectProperty ;
+    rdfs:label "instantiated from" ;
+    rdfs:domain prov:Entity ;
+    rdfs:range p-plan:Variable ;
+    owl:inverseOf ashcai:hasInstance ;
+    skos:definition "Instance is instantiated from template" .
 
-ashcai:integratesWith a owl:ObjectProperty ;
-    rdfs:label "integratesWith" ;
-    skos:definition "Integrates with another system" .
+ashcai:integratesWith a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "integrates with" ;
+    rdfs:domain ashcai:ProcessDomain ;
+    rdfs:range ashcai:ProcessDomain ;
+    skos:definition "Process domain integrates with another process domain" .
 
-ashcai:mapsToISO a owl:ObjectProperty ;
-    rdfs:label "mapsToISO" ;
-    owl:inverseOf ashcai:mappedFrom ;
-    skos:definition "Maps to ISO control" .
+ashcai:operationalizedIn a owl:ObjectProperty ;
+    rdfs:label "operationalized in" ;
+    rdfs:domain ashcai:RegulatoryRequirement ;
+    rdfs:range ashcai:ProcessDomain ;
+    owl:inverseOf ashcai:operationalizes ;
+    skos:definition "Requirement is operationalized in process domain" .
 
-ashcai:operationalizes a owl:ObjectProperty ;
-    rdfs:label "operationalizes" ;
-    owl:inverseOf ashcai:operationalizedIn ;
-    skos:definition "Operationalizes a policy" .
-
-ashcai:produces a owl:ObjectProperty ;
-    rdfs:label "produces" ;
-    owl:inverseOf ashcai:producedBy ;
-    skos:definition "Produces an output" .
-
-ashcai:realizes a owl:ObjectProperty ;
-    rdfs:label "realizes" ;
-    owl:inverseOf ashcai:realizedBy ;
-    skos:definition "Realizes a template or specification" .
+ashcai:partOfAIMS a owl:ObjectProperty ;
+    rdfs:label "part of AIMS" ;
+    rdfs:domain prov:Entity ;
+    rdfs:range ashcai:AIManagementSystem ;
+    owl:inverseOf ashcai:contains ;
+    skos:definition "Instance is part of AI Management System" .
 
 ashcai:referencesDocument a owl:ObjectProperty ;
-    rdfs:label "referencesDocument" ;
-    skos:definition "References a regulatory document" .
+    rdfs:label "references document" ;
+    rdfs:domain ashcai:WorkProductTemplate ;
+    rdfs:range ash:FDAGuidance ;
+    skos:definition "Work product references regulatory document" .
+
+ashcai:relatedTo a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "related to" ;
+    rdfs:domain ashcai:RegulatoryRequirement ;
+    rdfs:range ashcai:RegulatoryRequirement ;
+    skos:definition "Cross-framework alignment relationship" .
 
 ashcai:requires a owl:ObjectProperty ;
     rdfs:label "requires" ;
+    rdfs:domain ashcai:SOPTemplate ;
+    rdfs:range ashcai:Tool ;
     owl:inverseOf ashcai:requiredBy ;
-    skos:definition "Requires another element" .
+    skos:definition "SOP requires tool" .
 
 ashcai:scopedToDeviceClass a owl:ObjectProperty ;
-    rdfs:label "scopedToDeviceClass" ;
-    skos:definition "Scoped to device class" .
+    rdfs:label "scoped to device class" ;
+    rdfs:domain ashcai:PolicyDocument ;
+    rdfs:range ash:Deviceclass ;
+    skos:definition "Policy document scoped to device class" .
 
 ashcai:scopedToModality a owl:ObjectProperty ;
-    rdfs:label "scopedToModality" ;
-    skos:definition "Scoped to imaging modality" .
+    rdfs:label "scoped to modality" ;
+    rdfs:domain ashcai:PolicyDocument ;
+    rdfs:range ash:Imagingmodality ;
+    skos:definition "Policy document scoped to imaging modality" .
 
 ashcai:servesAsEvidenceFor a owl:ObjectProperty ;
-    rdfs:label "servesAsEvidenceFor" ;
+    rdfs:label "serves as evidence for" ;
+    rdfs:domain ashcai:WorkProductTemplate ;
+    rdfs:range ashcai:ExemplarControl ;
     owl:inverseOf ashcai:evidencedBy ;
-    skos:definition "Serves as evidence for compliance" .
-
-ashcai:specifies a owl:ObjectProperty ;
-    rdfs:label "specifies" ;
-    owl:inverseOf ashcai:specifiedBy ;
-    skos:definition "Specifies a requirement or control" .
-
-ashcai:supportsAssessment a owl:ObjectProperty ;
-    rdfs:label "supportsAssessment" ;
-    owl:inverseOf ashcai:supportedByEvidence ;
-    skos:definition "Supports an assessment" .
+    skos:definition "Work product serves as evidence for control" .
 
 ashcai:triggersActivity a owl:ObjectProperty ;
-    rdfs:label "triggersActivity" ;
+    rdfs:label "triggers activity" ;
+    rdfs:domain ashcai:WorkProductTemplate ;
+    rdfs:range ashcai:BasePractice ;
     owl:inverseOf ashcai:triggeredBy ;
-    skos:definition "Triggers an activity" .
+    skos:definition "Work product triggers activity in another domain" .
 
 ashcai:validatesComplianceWith a owl:ObjectProperty ;
-    rdfs:label "validatesComplianceWith" ;
+    rdfs:label "validates compliance with" ;
+    rdfs:domain ashcai:ExemplarControl ;
+    rdfs:range ashcai:PolicyDomain ;
     owl:inverseOf ashcai:validatedBy ;
-    skos:definition "Validates compliance with requirement" .
+    skos:definition "Control validates compliance with policy" .
+
+ash:Imagingmodality a owl:Class ;
+    rdfs:label "Imaging modality" ;
+    ash:classId "ASH0001004" ;
+    rdfs:subClassOf ash:SemanticType_T9001 ;
+    skos:definition "The type of data acquisition technology used (e.g., MRI, CT, X-ray)" .
 
 ash:SemanticType_T060 a owl:Class ;
     rdfs:label "DiagnosticProcedure" ;
-    ash:typeId "T060" ;
-    ash:umlsEquivalent true ;
-    skos:definition "Procedures used to diagnose a disease or condition" ;
-    skos:exactMatch "UMLS:T060" .
+    rdfs:subClassOf skos:Concept ;
+    skos:definition "Procedures used to diagnose a disease or condition" .
 
 ash:SemanticType_T093 a owl:Class ;
     rdfs:label "HealthCareRelatedOrganization" ;
-    ash:typeId "T093" ;
-    ash:umlsEquivalent true ;
-    rdfs:subClassOf ash:SemanticType_T077 ;
-    skos:definition "Organizations providing healthcare services" ;
-    skos:exactMatch "UMLS:T093" .
+    rdfs:subClassOf ash:SemanticType_T077,
+        skos:Concept ;
+    skos:definition "Organizations providing healthcare services" .
 
 ash:SemanticType_T9001 a owl:Class ;
     rdfs:label "ImagingModality" ;
-    ash:typeId "T9001" ;
-    rdfs:subClassOf ash:SemanticType_T060 ;
-    skos:definition "Types of medical imaging technology" ;
-    skos:exactMatch "SNOMED:363679005" .
+    rdfs:subClassOf ash:SemanticType_T060,
+        skos:Concept ;
+    skos:definition "Types of medical imaging technology" .
 
 ash:SemanticType_T9106 a owl:Class ;
     rdfs:label "Commercial" ;
-    ash:typeId "T9106" ;
+    rdfs:subClassOf skos:Concept ;
     skos:definition "Commercialization concepts and status" .
 
 ash:applies_to a owl:ObjectProperty ;
@@ -504,6 +418,18 @@ ash:derives_from a owl:ObjectProperty,
     rdfs:label "derives_from" ;
     owl:inverseOf ash:source_of ;
     skos:definition "A relationship indicating that one entity originates from or is based on another entity." .
+
+ash:governedBy a owl:ObjectProperty ;
+    rdfs:label "governed by" ;
+    rdfs:domain ash:Product ;
+    rdfs:range ashcai:PolicyDomain ;
+    skos:definition "ASH product is governed by policy domain" .
+
+ash:hasGovernanceRequirement a owl:ObjectProperty ;
+    rdfs:label "has governance requirement" ;
+    rdfs:domain ash:AIapplication ;
+    rdfs:range ashcai:ExemplarControl ;
+    skos:definition "AI application has governance requirement" .
 
 ash:has_application a owl:ObjectProperty ;
     rdfs:label "has_application" ;
@@ -550,62 +476,384 @@ ash:supports a owl:ObjectProperty ;
     owl:inverseOf ash:supported_by ;
     skos:definition "A relationship indicating that one entity provides evidence or support for another entity." .
 
-ashcai:governsProduct a owl:ObjectProperty ;
-    rdfs:label "governsProduct" ;
-    skos:definition "Governance domain governs a product" .
+skos:ConceptScheme a owl:Class ;
+    rdfs:label "skos:ConceptScheme" ;
+    rdfs:comment "SKOS Concept Scheme" .
+
+prov:Bundle a owl:Class ;
+    rdfs:label "prov:Bundle" ;
+    rdfs:comment "W3C PROV-O Bundle" .
+
+prov:Plan a owl:Class ;
+    rdfs:label "prov:Plan" ;
+    rdfs:comment "W3C PROV-O Plan" .
+
+ashcai:ControlAssessment a owl:Class ;
+    rdfs:label "Control Assessment" ;
+    rdfs:subClassOf prov:Activity ;
+    skos:definition "Assessment of a control for a customer" .
+
+ashcai:SOPExecution a owl:Class ;
+    rdfs:label "SOP Execution" ;
+    rdfs:subClassOf prov:Activity ;
+    skos:definition "Record of SOP execution with date and executor" .
+
+ashcai:addresses a owl:ObjectProperty ;
+    rdfs:label "addresses" ;
+    rdfs:domain ashcai:PolicyDomain ;
+    rdfs:range ashcai:RegulatoryRequirement ;
+    skos:definition "Policy domain addresses regulatory requirement" .
+
+ashcai:basedOn a owl:ObjectProperty ;
+    rdfs:label "based on" ;
+    rdfs:domain ashcai:AIManagementSystem ;
+    rdfs:range ashcai:GovernanceFramework ;
+    skos:definition "AIMS is based on governance framework" .
+
+ashcai:belongsToProcessDomain a owl:ObjectProperty ;
+    rdfs:label "belongs to process domain" ;
+    rdfs:domain ashcai:BasePractice ;
+    rdfs:range ashcai:ProcessDomain ;
+    skos:definition "Base practice belongs to process domain" .
+
+ashcai:composedFrom a owl:ObjectProperty ;
+    rdfs:label "composed from" ;
+    rdfs:domain ashcai:ProcessOutput ;
+    rdfs:range ashcai:WorkProductTemplate ;
+    skos:definition "Process output is composed from work products" .
+
+ashcai:contains a owl:ObjectProperty ;
+    rdfs:label "contains" ;
+    rdfs:domain ashcai:AIManagementSystem ;
+    rdfs:range prov:Entity ;
+    skos:definition "AIMS contains instance" .
+
+ashcai:containsBasePractice a owl:ObjectProperty ;
+    rdfs:label "contains base practice" ;
+    rdfs:domain ashcai:ProcessDomain ;
+    rdfs:range ashcai:BasePractice ;
+    owl:inverseOf ashcai:belongsToProcessDomain ;
+    skos:definition "Process domain contains base practice" .
+
+ashcai:derivedFrom a owl:ObjectProperty ;
+    rdfs:label "derived from" ;
+    rdfs:domain ashcai:AuditEvidence ;
+    rdfs:range ashcai:WorkProduct ;
+    skos:definition "Audit evidence is derived from work product" .
+
+ashcai:evidencedBy a owl:ObjectProperty ;
+    rdfs:label "evidenced by" ;
+    rdfs:domain ashcai:ExemplarControl ;
+    rdfs:range ashcai:WorkProductTemplate ;
+    skos:definition "Control is evidenced by work product" .
+
+ashcai:hasInstance a owl:ObjectProperty ;
+    rdfs:label "has instance" ;
+    rdfs:domain p-plan:Variable ;
+    rdfs:range prov:Entity ;
+    skos:definition "Template has instance" .
+
+ashcai:implements a owl:ObjectProperty ;
+    rdfs:label "implements" ;
+    rdfs:domain ashcai:ExemplarControl ;
+    rdfs:range ashcai:RegulatoryRequirement ;
+    skos:definition "Control implements requirement" .
+
+ashcai:mappedFrom a owl:ObjectProperty ;
+    rdfs:label "mapped from" ;
+    rdfs:domain ashcai:ISOControl ;
+    rdfs:range ashcai:ExemplarControl ;
+    skos:definition "ISO control is mapped from exemplar control" .
+
+ashcai:mapsToISO a owl:ObjectProperty ;
+    rdfs:label "maps to ISO" ;
+    rdfs:domain ashcai:ExemplarControl ;
+    rdfs:range ashcai:ISOControl ;
+    owl:inverseOf ashcai:mappedFrom ;
+    skos:definition "Exemplar control maps to ISO 42001 control" .
+
+ashcai:operationalizes a owl:ObjectProperty ;
+    rdfs:label "operationalizes" ;
+    rdfs:domain ashcai:ProcessDomain ;
+    rdfs:range ashcai:RegulatoryRequirement ;
+    skos:definition "Process domain operationalizes requirement" .
+
+ashcai:parentRequirement a owl:ObjectProperty ;
+    rdfs:label "parent requirement" ;
+    rdfs:domain ashcai:RegulatoryRequirement ;
+    rdfs:range ashcai:RegulatoryRequirement ;
+    skos:definition "Sub-requirement's parent" .
+
+ashcai:partOfCategory a owl:ObjectProperty ;
+    rdfs:label "part of category" ;
+    rdfs:domain ashcai:RegulatoryRequirement ;
+    rdfs:range ashcai:RegulatoryCategory ;
+    skos:definition "Requirement is part of category" .
+
+ashcai:partOfFramework a owl:ObjectProperty ;
+    rdfs:label "part of framework" ;
+    rdfs:domain ashcai:RegulatoryFunction ;
+    rdfs:range ashcai:RegulatoryFramework ;
+    skos:definition "Function is part of framework" .
+
+ashcai:partOfFunction a owl:ObjectProperty ;
+    rdfs:label "part of function" ;
+    rdfs:domain ashcai:RegulatoryCategory ;
+    rdfs:range ashcai:RegulatoryFunction ;
+    skos:definition "Category is part of function" .
+
+ashcai:producedBy a owl:ObjectProperty ;
+    rdfs:label "produced by" ;
+    rdfs:domain ashcai:WorkProductTemplate ;
+    rdfs:range ashcai:SOPTemplate ;
+    skos:definition "Work product is produced by SOP" .
+
+ashcai:produces a owl:ObjectProperty ;
+    rdfs:label "produces" ;
+    rdfs:domain ashcai:SOPTemplate ;
+    rdfs:range ashcai:WorkProductTemplate ;
+    owl:inverseOf ashcai:producedBy ;
+    skos:definition "SOP produces work product" .
+
+ashcai:realizedBy a owl:ObjectProperty ;
+    rdfs:label "realized by" ;
+    rdfs:domain ashcai:BasePractice ;
+    rdfs:range ashcai:SOPTemplate ;
+    owl:inverseOf ashcai:realizes ;
+    skos:definition "Base practice is realized by SOP" .
+
+ashcai:realizes a owl:ObjectProperty ;
+    rdfs:label "realizes" ;
+    rdfs:domain ashcai:SOPTemplate ;
+    rdfs:range ashcai:BasePractice ;
+    skos:definition "SOP realizes a base practice" .
+
+ashcai:requiredBy a owl:ObjectProperty ;
+    rdfs:label "required by" ;
+    rdfs:domain ashcai:Tool ;
+    rdfs:range ashcai:SOPTemplate ;
+    skos:definition "Tool is required by SOP" .
+
+ashcai:specifiedBy a owl:ObjectProperty ;
+    rdfs:label "specified by" ;
+    rdfs:domain ashcai:ProcessDomain ;
+    rdfs:range ashcai:PolicyDomain ;
+    skos:definition "Process domain is specified by policy domain" .
+
+ashcai:specifies a owl:ObjectProperty ;
+    rdfs:label "specifies" ;
+    rdfs:domain ashcai:PolicyDomain ;
+    rdfs:range ashcai:ProcessDomain ;
+    owl:inverseOf ashcai:specifiedBy ;
+    skos:definition "Policy domain specifies process domain requirements" .
+
+ashcai:triggeredBy a owl:ObjectProperty ;
+    rdfs:label "triggered by" ;
+    rdfs:domain ashcai:BasePractice ;
+    rdfs:range ashcai:WorkProductTemplate ;
+    skos:definition "Base practice is triggered by work product" .
+
+ashcai:validatedBy a owl:ObjectProperty ;
+    rdfs:label "validated by" ;
+    rdfs:domain ashcai:PolicyDomain ;
+    rdfs:range ashcai:ExemplarControl ;
+    skos:definition "Policy is validated by control" .
 
 ash:Regulatorystatus a owl:Class ;
     rdfs:label "Regulatory status" ;
     ash:classId "ASH0002001" ;
-    ash:hasSemanticType ash:SemanticType_T9103 ;
-    ash:status "active" ;
+    rdfs:subClassOf ash:SemanticType_T9103 ;
     skos:definition "The approval status from regulatory bodies (FDA, CE Mark, etc.)" .
 
 ash:SemanticType_T9102 a owl:Class ;
     rdfs:label "InputDataType" ;
-    ash:typeId "T9102" ;
+    rdfs:subClassOf skos:Concept ;
     skos:definition "Format or structure of data processed by AI models" .
+
+p-plan:Step a owl:Class ;
+    rdfs:label "p-plan:Step" ;
+    rdfs:comment "P-Plan Step" .
+
+prov:Activity a owl:Class ;
+    rdfs:label "prov:Activity" ;
+    rdfs:comment "W3C PROV-O Activity" .
+
+ashcai:AuditEvidence a owl:Class ;
+    rdfs:label "Audit Evidence" ;
+    rdfs:subClassOf prov:Entity ;
+    skos:definition "Evidence artifact collected for audit purposes" .
+
+ashcai:GovernanceFramework a owl:Class ;
+    rdfs:label "Governance Framework" ;
+    rdfs:subClassOf p-plan:Plan ;
+    skos:definition "Top-level AshMatics CAI Framework definition with version and effective date" .
+
+ashcai:PolicyDocument a owl:Class ;
+    rdfs:label "Policy Document" ;
+    rdfs:subClassOf prov:Entity ;
+    skos:definition "Customer policy document instance with approval status" .
+
+ashcai:ProcessOutput a owl:Class ;
+    rdfs:label "Process Output" ;
+    rdfs:subClassOf prov:Entity ;
+    skos:definition "Aggregated output composed from multiple work products" .
+
+ashcai:RegulatoryFramework a owl:Class ;
+    rdfs:label "Regulatory Framework" ;
+    rdfs:subClassOf skos:ConceptScheme ;
+    skos:definition "External regulatory framework (NIST, ISO, URAC, etc.)" .
+
+ashcai:Tool a owl:Class ;
+    rdfs:label "Tool" ;
+    rdfs:subClassOf prov:Entity ;
+    skos:definition "Tool required by an SOP for execution" .
+
+ash:AIapplication a owl:Class ;
+    rdfs:label "AI application" ;
+    ash:classId "ASH0001002" ;
+    rdfs:subClassOf ash:SemanticType_T9105 ;
+    skos:altLabel "AI App",
+        "AI Tool" ;
+    skos:definition "A specific application of AI technology that performs a defined function" .
+
+ash:Product a owl:Class ;
+    rdfs:label "Product" ;
+    ash:classId "ASH0001001" ;
+    rdfs:subClassOf ash:SemanticType_T9106 ;
+    skos:definition "A commercial offering in the medical imaging ecosystem" .
+
+p-plan:Plan a owl:Class ;
+    rdfs:label "p-plan:Plan" ;
+    rdfs:comment "P-Plan Plan (extends prov:Plan)" ;
+    rdfs:subClassOf prov:Plan .
+
+ashcai:ISOControl a owl:Class ;
+    rdfs:label "ISO Control" ;
+    rdfs:subClassOf skos:Concept ;
+    skos:definition "ISO 42001 Annex A control reference" .
 
 ash:AImodel a owl:Class ;
     rdfs:label "AI model" ;
     ash:classId "ASH0001005" ;
-    ash:hasSemanticType ash:SemanticType_T9101 ;
-    ash:status "active" ;
+    rdfs:subClassOf ash:SemanticType_T9101 ;
     skos:altLabel "Algorithm",
         "Neural Network" ;
     skos:definition "The actual trained algorithm/neural network" .
 
-ash:Deviceclass a owl:Class ;
-    rdfs:label "Device class" ;
-    ash:classId "ASH0001007" ;
-    ash:hasSemanticType ash:SemanticType_T9104 ;
-    ash:status "active" ;
-    skos:definition "The classification of the device according to US FDA regulatory standards" .
-
 ash:Clinicalapplication a owl:Class ;
     rdfs:label "Clinical application" ;
     ash:classId "ASH0001003" ;
-    ash:hasSemanticType ash:SemanticType_T9105 ;
-    ash:status "active" ;
+    rdfs:subClassOf ash:SemanticType_T9105 ;
     skos:definition "The specific clinical use case for an AI Application" .
+
+ash:Deviceclass a owl:Class ;
+    rdfs:label "Device class" ;
+    ash:classId "ASH0001007" ;
+    rdfs:subClassOf ash:SemanticType_T9104 ;
+    skos:definition "The classification of the device according to US FDA regulatory standards" .
 
 ash:SemanticType_T9101 a owl:Class ;
     rdfs:label "AIModelType" ;
-    ash:typeId "T9101" ;
+    rdfs:subClassOf skos:Concept ;
     skos:definition "Category of AI algorithm or model" .
 
 ash:SemanticType_T9103 a owl:Class ;
     rdfs:label "ModelPerformanceStatus" ;
-    ash:typeId "T9103" ;
+    rdfs:subClassOf skos:Concept ;
     skos:definition "Development, validation or regulatory status of AI model" .
 
 ash:SemanticType_T9104 a owl:Class ;
     rdfs:label "RegulatoryClassification" ;
-    ash:typeId "T9104" ;
+    rdfs:subClassOf skos:Concept ;
     skos:definition "Regulatory classification of medical device" .
+
+p-plan:Variable a owl:Class ;
+    rdfs:label "p-plan:Variable" ;
+    rdfs:comment "P-Plan Variable" .
+
+ashcai:RegulatoryCategory a owl:Class ;
+    rdfs:label "Regulatory Category" ;
+    rdfs:subClassOf skos:Concept ;
+    skos:definition "Category of requirements within a function" .
+
+ashcai:RegulatoryFunction a owl:Class ;
+    rdfs:label "Regulatory Function" ;
+    rdfs:subClassOf skos:Concept ;
+    skos:definition "Top-level function within a regulatory framework (e.g., NIST GOVERN, MAP)" .
+
+ashcai:WorkProduct a owl:Class ;
+    rdfs:label "Work Product" ;
+    rdfs:subClassOf prov:Entity ;
+    skos:definition "Customer work product instance derived from template" .
+
+ashcai:AIManagementSystem a owl:Class ;
+    rdfs:label "AI Management System" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ashcai:basedOn ;
+            owl:someValuesFrom ashcai:GovernanceFramework ],
+        prov:Bundle ;
+    skos:definition "Customer's AI Management System instantiation" .
 
 ash:SemanticType_T9105 a owl:Class ;
     rdfs:label "ClinicalApplication" ;
-    ash:typeId "T9105" ;
+    rdfs:subClassOf skos:Concept ;
     skos:definition "How the AI model is applied in clinical context" .
+
+ashcai:BasePractice a owl:Class ;
+    rdfs:label "Base Practice" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ashcai:realizedBy ;
+            owl:someValuesFrom ashcai:SOPTemplate ],
+        p-plan:Step ;
+    skos:definition "Fundamental practice within a process domain with defined duration and sequence" .
+
+ashcai:SOPTemplate a owl:Class ;
+    rdfs:label "SOP Template" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ashcai:produces ;
+            owl:someValuesFrom ashcai:WorkProductTemplate ],
+        p-plan:Step ;
+    skos:definition "Standard Operating Procedure template that realizes a base practice" .
+
+ashcai:PolicyDomain a owl:Class ;
+    rdfs:label "Policy Domain" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ashcai:specifies ;
+            owl:someValuesFrom ashcai:ProcessDomain ],
+        p-plan:Plan ;
+    skos:definition "Policy domain that specifies governance requirements for a process area" .
+
+ashcai:ProcessDomain a owl:Class ;
+    rdfs:label "Process Domain" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ashcai:containsBasePractice ;
+            owl:someValuesFrom ashcai:BasePractice ],
+        p-plan:Plan ;
+    skos:definition "Process domain containing base practices for a functional area" .
+
+ashcai:WorkProductTemplate a owl:Class ;
+    rdfs:label "Work Product Template" ;
+    rdfs:subClassOf p-plan:Variable ;
+    skos:definition "Template for work products produced by SOPs, serves as evidence" .
+
+prov:Entity a owl:Class ;
+    rdfs:label "prov:Entity" ;
+    rdfs:comment "W3C PROV-O Entity" .
+
+ashcai:ExemplarControl a owl:Class ;
+    rdfs:label "Exemplar Control" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ashcai:mapsToISO ;
+            owl:someValuesFrom ashcai:ISOControl ],
+        skos:Concept ;
+    skos:definition "AshMatics exemplar control that maps to ISO 42001" .
+
+ashcai:RegulatoryRequirement a owl:Class ;
+    rdfs:label "Regulatory Requirement" ;
+    rdfs:subClassOf skos:Concept ;
+    skos:definition "Specific requirement from a regulatory framework" .
+
+skos:Concept a owl:Class ;
+    rdfs:label "skos:Concept" ;
+    rdfs:comment "SKOS Concept" .
 

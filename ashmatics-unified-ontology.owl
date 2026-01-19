@@ -1,356 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
    xmlns:ash="http://asherinformatics.com/ontology/ashmatics/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
    xmlns:owl="http://www.w3.org/2002/07/owl#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Treatmentplanning">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Treatment planning</rdfs:label>
-    <skos:definition>Clinical application: Treatment Planning</skos:definition>
-    <ash:classId>ASH0004004</ash:classId>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9105"/>
-    <ash:status>active</ash:status>
-    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/Clinicalapplication"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/part_of">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-    <rdfs:label>part_of</rdfs:label>
-    <skos:definition>A relationship indicating that one entity is a component or part of another entity.</skos:definition>
-    <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/has_part"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9103">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>ModelPerformanceStatus</rdfs:label>
-    <skos:definition>Development, validation or regulatory status of AI model</skos:definition>
-    <ash:typeId>T9103</ash:typeId>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/has_part">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-    <rdfs:label>has_part</rdfs:label>
-    <skos:definition>A relationship indicating that one entity contains or includes another entity as a component or part.</skos:definition>
-    <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/part_of"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T017">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>AnatomicStructure</rdfs:label>
-    <skos:definition>Body structure or anatomical region</skos:definition>
-    <ash:typeId>T017</ash:typeId>
-    <ash:umlsEquivalent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ash:umlsEquivalent>
-    <skos:exactMatch>UMLS:T017</skos:exactMatch>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Commercialstatus">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Commercial status</rdfs:label>
-    <skos:definition>The commercial status of an AI Application</skos:definition>
-    <ash:classId>ASH0001006</ash:classId>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9103"/>
-    <ash:status>active</ash:status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Monitoring">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Monitoring</rdfs:label>
-    <skos:definition>Clinical application: Monitoring</skos:definition>
-    <ash:classId>ASH0004003</ash:classId>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9105"/>
-    <ash:status>active</ash:status>
-    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/Clinicalapplication"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#assesses">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>assesses</rdfs:label>
-    <skos:definition>Assesses a control</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Screening">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Screening</rdfs:label>
-    <skos:definition>Clinical application: Screening</skos:definition>
-    <ash:classId>ASH0004002</ash:classId>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9105"/>
-    <ash:status>active</ash:status>
-    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/Clinicalapplication"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#WizardQuestion">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>WizardQuestion</rdfs:label>
-    <skos:definition>Question in a compliance wizard</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Diagnostic">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Diagnostic</rdfs:label>
-    <skos:definition>Clinical application: Diagnostic</skos:definition>
-    <ash:classId>ASH0004001</ash:classId>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9105"/>
-    <ash:status>active</ash:status>
-    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/Clinicalapplication"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#mapsToISO">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>mapsToISO</rdfs:label>
-    <skos:definition>Maps to ISO control</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#mappedFrom"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#hasSubRequirement">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>hasSubRequirement</rdfs:label>
-    <skos:definition>Has a sub-requirement</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#parentRequirement"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/AImodel">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>AI model</rdfs:label>
-    <skos:definition>The actual trained algorithm/neural network</skos:definition>
-    <ash:classId>ASH0001005</ash:classId>
-    <skos:altLabel>Neural Network</skos:altLabel>
-    <skos:altLabel>Algorithm</skos:altLabel>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9101"/>
-    <ash:status>active</ash:status>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#hasCategory">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>hasCategory</rdfs:label>
-    <skos:definition>Has a category</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#partOfFunction"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/supports">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>supports</rdfs:label>
-    <skos:definition>A relationship indicating that one entity provides evidence or support for another entity.</skos:definition>
-    <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/supported_by"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Deviceclass">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Device class</rdfs:label>
-    <skos:definition>The classification of the device according to US FDA regulatory standards</skos:definition>
-    <ash:classId>ASH0001007</ash:classId>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9104"/>
-    <ash:status>active</ash:status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/is_a">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-    <rdfs:label>is_a</rdfs:label>
-    <skos:definition>A subsumption relationship indicating that one entity is a type or subclass of another entity.</skos:definition>
-    <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/has_subtype"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/3Dvolumes">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>3D volumes</rdfs:label>
-    <skos:definition>Input data type: 3D Volumes</skos:definition>
-    <ash:classId>ASH0003011</ash:classId>
-    <skos:altLabel>3D volume</skos:altLabel>
-    <skos:altLabel>Three-dimensional volumes</skos:altLabel>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9102"/>
-    <ash:status>active</ash:status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/applies_to">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>applies_to</rdfs:label>
-    <skos:definition>A relationship indicating that one entity is applicable to or relevant for another entity.</skos:definition>
-    <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/has_application"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Class1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Class 1</rdfs:label>
-    <skos:definition>Device classification: Class I</skos:definition>
-    <ash:classId>ASH0005001</ash:classId>
-    <skos:altLabel>Class I</skos:altLabel>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9104"/>
-    <ash:status>active</ash:status>
-    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/Deviceclass"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/derives_from">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-    <rdfs:label>derives_from</rdfs:label>
-    <skos:definition>A relationship indicating that one entity originates from or is based on another entity.</skos:definition>
-    <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/source_of"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9003">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>SiteOfCare</rdfs:label>
-    <skos:definition>Healthcare environment context</skos:definition>
-    <ash:typeId>T9003</ash:typeId>
-    <ash:umlsEquivalent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ash:umlsEquivalent>
-    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T093"/>
-    <skos:exactMatch>SNOMED:43741000</skos:exactMatch>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9105">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>ClinicalApplication</rdfs:label>
-    <skos:definition>How the AI model is applied in clinical context</skos:definition>
-    <ash:typeId>T9105</ash:typeId>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#operationalizes">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>operationalizes</rdfs:label>
-    <skos:definition>Operationalizes a policy</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#operationalizedIn"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Product">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Product</rdfs:label>
-    <skos:definition>A commercial offering in the medical imaging ecosystem</skos:definition>
-    <ash:classId>ASH0001001</ash:classId>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9106"/>
-    <ash:status>active</ash:status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/2Dimages">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>2D images</rdfs:label>
-    <skos:definition>Input data type: 2D Images</skos:definition>
-    <ash:classId>ASH0003010</ash:classId>
-    <skos:altLabel>2D image</skos:altLabel>
-    <skos:altLabel>Two-dimensional images</skos:altLabel>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9102"/>
-    <ash:status>active</ash:status>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#SOPExecution">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>SOPExecution</rdfs:label>
-    <skos:definition>Execution record of an SOP</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#RegulatoryCategory">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>RegulatoryCategory</rdfs:label>
-    <skos:definition>Category of regulatory requirements</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9104">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>RegulatoryClassification</rdfs:label>
-    <skos:definition>Regulatory classification of medical device</skos:definition>
-    <ash:typeId>T9104</ash:typeId>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#ISOControl">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>ISOControl</rdfs:label>
-    <skos:definition>Control mapped to ISO standards</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#hasTemplate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>hasTemplate</rdfs:label>
-    <skos:definition>Has a template</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#templateFor"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#BasePractice">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>BasePractice</rdfs:label>
-    <skos:definition>Fundamental practice for AI governance</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#ExemplarControl">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>ExemplarControl</rdfs:label>
-    <skos:definition>Example control for compliance</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T060">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>DiagnosticProcedure</rdfs:label>
-    <skos:definition>Procedures used to diagnose a disease or condition</skos:definition>
-    <ash:typeId>T060</ash:typeId>
-    <ash:umlsEquivalent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ash:umlsEquivalent>
-    <skos:exactMatch>UMLS:T060</skos:exactMatch>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T047">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>DiseaseOrSyndrome</rdfs:label>
-    <skos:definition>Disease or pathologic condition</skos:definition>
-    <ash:typeId>T047</ash:typeId>
-    <ash:umlsEquivalent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ash:umlsEquivalent>
-    <skos:exactMatch>UMLS:T047</skos:exactMatch>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#composedInto">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>composedInto</rdfs:label>
-    <skos:definition>Composed into a larger element</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#composedFrom"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/source_of">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-    <rdfs:label>source_of</rdfs:label>
-    <skos:definition>A relationship indicating that one entity is the origin or source of another entity.</skos:definition>
-    <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/derives_from"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Class3">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Class 3</rdfs:label>
-    <skos:definition>Device classification: Class III</skos:definition>
-    <ash:classId>ASH0005003</ash:classId>
-    <skos:altLabel>Class III</skos:altLabel>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9104"/>
-    <ash:status>active</ash:status>
-    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/Deviceclass"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics-unified">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <rdfs:label>AshMatics Unified Ontology</rdfs:label>
-    <rdfs:comment>ASH (Domain) + ASHCAI (Governance) - Medical Imaging AI Ontology</rdfs:comment>
-    <owl:versionInfo>1.0.0</owl:versionInfo>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#hasFunction">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>hasFunction</rdfs:label>
-    <skos:definition>Has a regulatory function</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#partOfFramework"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#integratesWith">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>integratesWith</rdfs:label>
-    <skos:definition>Integrates with another system</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#executionOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>executionOf</rdfs:label>
-    <skos:definition>Execution of a template</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T093">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>HealthCareRelatedOrganization</rdfs:label>
-    <skos:definition>Organizations providing healthcare services</skos:definition>
-    <ash:typeId>T093</ash:typeId>
-    <ash:umlsEquivalent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ash:umlsEquivalent>
-    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T077"/>
-    <skos:exactMatch>UMLS:T093</skos:exactMatch>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#hasOverviewSummary">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>hasOverviewSummary</rdfs:label>
-    <skos:definition>Has an overview summary</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#summarizes"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#basedOn">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>basedOn</rdfs:label>
-    <skos:definition>Based on another element</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#scopedToModality">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>scopedToModality</rdfs:label>
-    <skos:definition>Scoped to imaging modality</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/supported_by">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>supported_by</rdfs:label>
-    <skos:definition>A relationship indicating that one entity is supported or backed by evidence from another entity.</skos:definition>
-    <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/supports"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Imagingmodality">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Imaging modality</rdfs:label>
-    <skos:definition>The type of data acquisition technology used (e.g., MRI, CT, X-ray)</skos:definition>
-    <ash:classId>ASH0001004</ash:classId>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9001"/>
-    <ash:status>active</ash:status>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#AuditEvidence">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>AuditEvidence</rdfs:label>
-    <skos:definition>Evidence for audit purposes</skos:definition>
-  </rdf:Description>
   <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/equivalent_to">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
@@ -358,62 +14,12 @@
     <rdfs:label>equivalent_to</rdfs:label>
     <skos:definition>A relationship indicating that two entities have the same meaning or refer to the same concept.</skos:definition>
   </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Regulatorystatus">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Regulatory status</rdfs:label>
-    <skos:definition>The approval status from regulatory bodies (FDA, CE Mark, etc.)</skos:definition>
-    <ash:classId>ASH0002001</ash:classId>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9103"/>
-    <ash:status>active</ash:status>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#PolicyDocument">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>PolicyDocument</rdfs:label>
-    <skos:definition>Instantiated policy document</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/CEmarked">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>CE marked</rdfs:label>
-    <skos:definition>Model performance: CE-Marked</skos:definition>
-    <ash:classId>ASH0002011</ash:classId>
-    <skos:altLabel>CE-marked</skos:altLabel>
-    <skos:altLabel>European approved</skos:altLabel>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9103"/>
-    <ash:status>active</ash:status>
-    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/Regulatorystatus"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#implements">
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#requiredBy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>implements</rdfs:label>
-    <skos:definition>Implements a specification</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#implementedThrough"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9201">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>RelationshipType</rdfs:label>
-    <skos:definition>Type of relationship between two entities</skos:definition>
-    <ash:typeId>T9201</ash:typeId>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#validatesComplianceWith">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>validatesComplianceWith</rdfs:label>
-    <skos:definition>Validates compliance with requirement</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#validatedBy"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#scopedToDeviceClass">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>scopedToDeviceClass</rdfs:label>
-    <skos:definition>Scoped to device class</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#forAIModel">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>forAIModel</rdfs:label>
-    <skos:definition>For a specific AI model</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#ControlAssessment">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>ControlAssessment</rdfs:label>
-    <skos:definition>Assessment of a control</skos:definition>
+    <rdfs:label>required by</rdfs:label>
+    <skos:definition>Tool is required by SOP</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#Tool"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#SOPTemplate"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/contradicts">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -421,175 +27,63 @@
     <rdfs:label>contradicts</rdfs:label>
     <skos:definition>A relationship indicating that two entities have conflicting or opposing meanings.</skos:definition>
   </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#Tool">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Tool</rdfs:label>
-    <skos:definition>Tool used in governance processes</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Detection">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Detection</rdfs:label>
-    <skos:definition>Model type: Detection</skos:definition>
-    <ash:classId>ASH0003003</ash:classId>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9101"/>
-    <ash:status>active</ash:status>
-    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/AImodel"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#PolicyTemplate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>PolicyTemplate</rdfs:label>
-    <skos:definition>Template for policy documents</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#ProcessOutput">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>ProcessOutput</rdfs:label>
-    <skos:definition>Output produced by a governance process</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9106">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Commercial</rdfs:label>
-    <skos:definition>Commercialization concepts and status</skos:definition>
-    <ash:typeId>T9106</ash:typeId>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Class2">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Class 2</rdfs:label>
-    <skos:definition>Device classification: Class II</skos:definition>
-    <ash:classId>ASH0005002</ash:classId>
-    <skos:altLabel>Class II</skos:altLabel>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9104"/>
-    <ash:status>active</ash:status>
-    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/Deviceclass"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/governedBy">
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#validatedBy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>governed by</rdfs:label>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#governsProduct"/>
+    <rdfs:label>validated by</rdfs:label>
+    <skos:definition>Policy is validated by control</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#PolicyDomain"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#ExemplarControl"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#requires">
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#servesAsEvidenceFor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>requires</rdfs:label>
-    <skos:definition>Requires another element</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#requiredBy"/>
+    <rdfs:label>serves as evidence for</rdfs:label>
+    <skos:definition>Work product serves as evidence for control</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#WorkProductTemplate"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#ExemplarControl"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#evidencedBy"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#supportsAssessment">
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#partOfCategory">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>supportsAssessment</rdfs:label>
-    <skos:definition>Supports an assessment</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#supportedByEvidence"/>
+    <rdfs:label>part of category</rdfs:label>
+    <skos:definition>Requirement is part of category</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryRequirement"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryCategory"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#GovernanceFramework">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>GovernanceFramework</rdfs:label>
-    <skos:definition>Framework for AI governance policies and processes</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Clinicalapplication">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Clinical application</rdfs:label>
-    <skos:definition>The specific clinical use case for an AI Application</skos:definition>
-    <ash:classId>ASH0001003</ash:classId>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9105"/>
-    <ash:status>active</ash:status>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#addresses">
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#implementedThrough">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>addresses</rdfs:label>
-    <skos:definition>Addresses a requirement</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#addressedBy"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Classification">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Classification</rdfs:label>
-    <skos:definition>Model type: Classification</skos:definition>
-    <ash:classId>ASH0003001</ash:classId>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9101"/>
-    <ash:status>active</ash:status>
-    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/AImodel"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#produces">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>produces</rdfs:label>
-    <skos:definition>Produces an output</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#producedBy"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#WorkProduct">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>WorkProduct</rdfs:label>
-    <skos:definition>Produced work product</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#ProcessDomain">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>ProcessDomain</rdfs:label>
-    <skos:definition>Domain of processes for AI lifecycle management</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#triggersActivity">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>triggersActivity</rdfs:label>
-    <skos:definition>Triggers an activity</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#triggeredBy"/>
+    <rdfs:label>implemented through</rdfs:label>
+    <skos:definition>Requirement is implemented through control</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryRequirement"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#ExemplarControl"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#implements"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#hasInstance">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>hasInstance</rdfs:label>
-    <skos:definition>Has an instance</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#instantiatedFrom"/>
+    <rdfs:label>has instance</rdfs:label>
+    <skos:definition>Template has instance</skos:definition>
+    <rdfs:domain rdf:resource="http://purl.org/net/p-plan#Variable"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Entity"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#RegulatoryRequirement">
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#ISOControl">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>RegulatoryRequirement</rdfs:label>
-    <skos:definition>Specific regulatory requirement</skos:definition>
+    <rdfs:label>ISO Control</rdfs:label>
+    <skos:definition>ISO 42001 Annex A control reference</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#coversProducts">
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#derivedInto">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>coversProducts</rdfs:label>
-    <skos:definition>AIMS covers products</skos:definition>
+    <rdfs:label>derived into</rdfs:label>
+    <skos:definition>Work product is derived into audit evidence</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#WorkProduct"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#AuditEvidence"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#derivedFrom"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9001">
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Regulatorystatus">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>ImagingModality</rdfs:label>
-    <skos:definition>Types of medical imaging technology</skos:definition>
-    <ash:typeId>T9001</ash:typeId>
-    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T060"/>
-    <skos:exactMatch>SNOMED:363679005</skos:exactMatch>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/FDAcleared">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>FDA cleared</rdfs:label>
-    <skos:definition>Model performance: FDA-Cleared</skos:definition>
-    <ash:classId>ASH0002010</ash:classId>
-    <skos:altLabel>FDA-cleared</skos:altLabel>
-    <skos:altLabel>FDA approved</skos:altLabel>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9103"/>
-    <ash:status>active</ash:status>
-    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/Regulatorystatus"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/related_to">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-    <rdfs:label>related_to</rdfs:label>
-    <skos:definition>A general relationship indicating that two entities are connected or associated in some way.</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#RegulatoryFramework">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>RegulatoryFramework</rdfs:label>
-    <skos:definition>Regulatory framework (FDA, CE, etc.)</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#specifies">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>specifies</rdfs:label>
-    <skos:definition>Specifies a requirement or control</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#specifiedBy"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#SOPTemplate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>SOPTemplate</rdfs:label>
-    <skos:definition>Standard Operating Procedure template</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#contains">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>contains</rdfs:label>
-    <skos:definition>Contains an element</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#partOfAIMS"/>
+    <rdfs:label>Regulatory status</rdfs:label>
+    <skos:definition>The approval status from regulatory bodies (FDA, CE Mark, etc.)</skos:definition>
+    <ash:classId>ASH0002001</ash:classId>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9103"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/AIapplication">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -598,89 +92,310 @@
     <ash:classId>ASH0001002</ash:classId>
     <skos:altLabel>AI App</skos:altLabel>
     <skos:altLabel>AI Tool</skos:altLabel>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9105"/>
-    <ash:status>active</ash:status>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9105"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#containsBasePractice">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>containsBasePractice</rdfs:label>
-    <skos:definition>Contains a base practice</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#belongsToProcessDomain"/>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#PolicyDomain">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Policy Domain</rdfs:label>
+    <skos:definition>Policy domain that specifies governance requirements for a process area</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Plan"/>
+    <rdfs:subClassOf rdf:nodeID="Nfce89e584d9c45909da6956db2e214b1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#referencesDocument">
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Imagingmodality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Imaging modality</rdfs:label>
+    <skos:definition>The type of data acquisition technology used (e.g., MRI, CT, X-ray)</skos:definition>
+    <ash:classId>ASH0001004</ash:classId>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9001"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#instantiatedFrom">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>referencesDocument</rdfs:label>
-    <skos:definition>References a regulatory document</skos:definition>
+    <rdfs:label>instantiated from</rdfs:label>
+    <skos:definition>Instance is instantiated from template</skos:definition>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:range rdf:resource="http://purl.org/net/p-plan#Variable"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#hasInstance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#parentRequirement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>parent requirement</rdfs:label>
+    <skos:definition>Sub-requirement's parent</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryRequirement"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryRequirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#PolicyDocument">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Policy Document</rdfs:label>
+    <skos:definition>Customer policy document instance with approval status</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#AIManagementSystem">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>AIManagementSystem</rdfs:label>
-    <skos:definition>AI Management System instance</skos:definition>
+    <rdfs:label>AI Management System</rdfs:label>
+    <skos:definition>Customer's AI Management System instantiation</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Bundle"/>
+    <rdfs:subClassOf rdf:nodeID="Ne759d63e4e0843689c38e4c9a5271cab"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Class2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Class 2</rdfs:label>
+    <skos:definition>Device classification: Class II</skos:definition>
+    <ash:classId>ASH0005002</ash:classId>
+    <skos:altLabel>Class II</skos:altLabel>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9104"/>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/Deviceclass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9001">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>ImagingModality</rdfs:label>
+    <skos:definition>Types of medical imaging technology</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T060"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#AuditEvidence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Audit Evidence</rdfs:label>
+    <skos:definition>Evidence artifact collected for audit purposes</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Clinicalapplication">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Clinical application</rdfs:label>
+    <skos:definition>The specific clinical use case for an AI Application</skos:definition>
+    <ash:classId>ASH0001003</ash:classId>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9105"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#contains">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>contains</rdfs:label>
+    <skos:definition>AIMS contains instance</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#AIManagementSystem"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Entity"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Segmentation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label>Segmentation</rdfs:label>
     <skos:definition>Model type: Segmentation</skos:definition>
     <ash:classId>ASH0003002</ash:classId>
-    <ash:hasSemanticType rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9101"/>
-    <ash:status>active</ash:status>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9101"/>
     <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/AImodel"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#OverviewSummary">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>OverviewSummary</rdfs:label>
-    <skos:definition>Summary overview document</skos:definition>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#hasRequirement">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>hasRequirement</rdfs:label>
-    <skos:definition>Has a requirement</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#partOfCategory"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#appliesTo">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>appliesTo</rdfs:label>
-    <skos:definition>Control applies to an application</skos:definition>
+    <rdfs:label>applies to</rdfs:label>
+    <skos:definition>Control/requirement applies to AI application</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#ExemplarControl"/>
+    <rdfs:range rdf:resource="http://asherinformatics.com/ontology/ashmatics/AIapplication"/>
+    <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/hasGovernanceRequirement"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#WorkProductTemplate">
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#WizardQuestion">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>WorkProductTemplate</rdfs:label>
-    <skos:definition>Template for work products</skos:definition>
+    <rdfs:label>Wizard Question</rdfs:label>
+    <skos:definition>Assessment question for evaluating compliance with a requirement</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#PolicyDomain">
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Treatmentplanning">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>PolicyDomain</rdfs:label>
-    <skos:definition>Domain of policies governing AI systems</skos:definition>
+    <rdfs:label>Treatment planning</rdfs:label>
+    <skos:definition>Clinical application: Treatment Planning</skos:definition>
+    <ash:classId>ASH0004004</ash:classId>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9105"/>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/Clinicalapplication"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9002">
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Monitoring">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>ClinicalSpecialty</rdfs:label>
-    <skos:definition>Medical specialty domains</skos:definition>
-    <ash:typeId>T9002</ash:typeId>
-    <skos:exactMatch>SNOMED:394658006</skos:exactMatch>
+    <rdfs:label>Monitoring</rdfs:label>
+    <skos:definition>Clinical application: Monitoring</skos:definition>
+    <ash:classId>ASH0004003</ash:classId>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9105"/>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/Clinicalapplication"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9101">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>AIModelType</rdfs:label>
-    <skos:definition>Category of AI algorithm or model</skos:definition>
-    <ash:typeId>T9101</ash:typeId>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#composedFrom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>composed from</rdfs:label>
+    <skos:definition>Process output is composed from work products</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#ProcessOutput"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#WorkProductTemplate"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9102">
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/3Dvolumes">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>InputDataType</rdfs:label>
-    <skos:definition>Format or structure of data processed by AI models</skos:definition>
-    <ash:typeId>T9102</ash:typeId>
+    <rdfs:label>3D volumes</rdfs:label>
+    <skos:definition>Input data type: 3D Volumes</skos:definition>
+    <ash:classId>ASH0003011</ash:classId>
+    <skos:altLabel>3D volume</skos:altLabel>
+    <skos:altLabel>Three-dimensional volumes</skos:altLabel>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9102"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#RegulatoryFunction">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>RegulatoryFunction</rdfs:label>
-    <skos:definition>Function within a regulatory framework</skos:definition>
+    <rdfs:label>Regulatory Function</rdfs:label>
+    <skos:definition>Top-level function within a regulatory framework (e.g., NIST GOVERN, MAP)</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#realizes">
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#assesses">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>realizes</rdfs:label>
-    <skos:definition>Realizes a template or specification</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#realizedBy"/>
+    <rdfs:label>assesses</rdfs:label>
+    <skos:definition>Control assessment assesses a control</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#ControlAssessment"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#ExemplarControl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Class3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Class 3</rdfs:label>
+    <skos:definition>Device classification: Class III</skos:definition>
+    <ash:classId>ASH0005003</ash:classId>
+    <skos:altLabel>Class III</skos:altLabel>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9104"/>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/Deviceclass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/is_a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:label>is_a</rdfs:label>
+    <skos:definition>A subsumption relationship indicating that one entity is a type or subclass of another entity.</skos:definition>
+    <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/has_subtype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/supports">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>supports</rdfs:label>
+    <skos:definition>A relationship indicating that one entity provides evidence or support for another entity.</skos:definition>
+    <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/supported_by"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#producedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>produced by</rdfs:label>
+    <skos:definition>Work product is produced by SOP</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#WorkProductTemplate"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#SOPTemplate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#scopedToDeviceClass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>scoped to device class</rdfs:label>
+    <skos:definition>Policy document scoped to device class</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#PolicyDocument"/>
+    <rdfs:range rdf:resource="http://asherinformatics.com/ontology/ashmatics/Deviceclass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#derivedFrom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>derived from</rdfs:label>
+    <skos:definition>Audit evidence is derived from work product</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#AuditEvidence"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#WorkProduct"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#governsProduct">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>governs product</rdfs:label>
+    <skos:definition>Policy domain governs ASH product/application</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#PolicyDomain"/>
+    <rdfs:range rdf:resource="http://asherinformatics.com/ontology/ashmatics/Product"/>
+    <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/governedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/governedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>governed by</rdfs:label>
+    <skos:definition>ASH product is governed by policy domain</skos:definition>
+    <rdfs:domain rdf:resource="http://asherinformatics.com/ontology/ashmatics/Product"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#PolicyDomain"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#specifiedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>specified by</rdfs:label>
+    <skos:definition>Process domain is specified by policy domain</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#ProcessDomain"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#PolicyDomain"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#triggersActivity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>triggers activity</rdfs:label>
+    <skos:definition>Work product triggers activity in another domain</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#WorkProductTemplate"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#BasePractice"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#triggeredBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#mapsToISO">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>maps to ISO</rdfs:label>
+    <skos:definition>Exemplar control maps to ISO 42001 control</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#ExemplarControl"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#ISOControl"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#mappedFrom"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/hasGovernanceRequirement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>has governance requirement</rdfs:label>
+    <skos:definition>AI application has governance requirement</skos:definition>
+    <rdfs:domain rdf:resource="http://asherinformatics.com/ontology/ashmatics/AIapplication"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#ExemplarControl"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne759d63e4e0843689c38e4c9a5271cab">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://ashmatics.com/ontology/cai#basedOn"/>
+    <owl:someValuesFrom rdf:resource="https://ashmatics.com/ontology/cai#GovernanceFramework"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T093">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>HealthCareRelatedOrganization</rdfs:label>
+    <skos:definition>Organizations providing healthcare services</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T077"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#containsBasePractice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>contains base practice</rdfs:label>
+    <skos:definition>Process domain contains base practice</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#ProcessDomain"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#BasePractice"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#belongsToProcessDomain"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfce89e584d9c45909da6956db2e214b1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://ashmatics.com/ontology/cai#specifies"/>
+    <owl:someValuesFrom rdf:resource="https://ashmatics.com/ontology/cai#ProcessDomain"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#composedInto">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>composed into</rdfs:label>
+    <skos:definition>Work products are composed into process output</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#WorkProductTemplate"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#ProcessOutput"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#composedFrom"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#Entity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>prov:Entity</rdfs:label>
+    <rdfs:comment>W3C PROV-O Entity</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9103">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>ModelPerformanceStatus</rdfs:label>
+    <skos:definition>Development, validation or regulatory status of AI model</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T047">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>DiseaseOrSyndrome</rdfs:label>
+    <skos:definition>Disease or pathologic condition</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#requires">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>requires</rdfs:label>
+    <skos:definition>SOP requires tool</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#SOPTemplate"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#Tool"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#requiredBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/part_of">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:label>part_of</rdfs:label>
+    <skos:definition>A relationship indicating that one entity is a component or part of another entity.</skos:definition>
+    <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/has_part"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7ab3e0ea989e4e41a98e7e72d7cb8eff">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://ashmatics.com/ontology/cai#mapsToISO"/>
+    <owl:someValuesFrom rdf:resource="https://ashmatics.com/ontology/cai#ISOControl"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/has_subtype">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -689,18 +404,402 @@
     <skos:definition>A relationship indicating that one entity has another entity as a subtype or subclass.</skos:definition>
     <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/is_a"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T061">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>TherapeuticOrPreventiveProcedure</rdfs:label>
-    <skos:definition>Treatment or prevention procedures</skos:definition>
-    <ash:typeId>T061</ash:typeId>
-    <ash:umlsEquivalent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ash:umlsEquivalent>
-    <skos:exactMatch>UMLS:T061</skos:exactMatch>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#forAIApplication">
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#produces">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>forAIApplication</rdfs:label>
-    <skos:definition>For a specific AI application</skos:definition>
+    <rdfs:label>produces</rdfs:label>
+    <skos:definition>SOP produces work product</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#SOPTemplate"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#WorkProductTemplate"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#producedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#hasRequirement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>has requirement</rdfs:label>
+    <skos:definition>Category has requirement</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryCategory"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryRequirement"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#partOfCategory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Class1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Class 1</rdfs:label>
+    <skos:definition>Device classification: Class I</skos:definition>
+    <ash:classId>ASH0005001</ash:classId>
+    <skos:altLabel>Class I</skos:altLabel>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9104"/>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/Deviceclass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>skos:Concept</rdfs:label>
+    <rdfs:comment>SKOS Concept</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#realizedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>realized by</rdfs:label>
+    <skos:definition>Base practice is realized by SOP</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#BasePractice"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#SOPTemplate"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#realizes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9106">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Commercial</rdfs:label>
+    <skos:definition>Commercialization concepts and status</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#operationalizes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>operationalizes</rdfs:label>
+    <skos:definition>Process domain operationalizes requirement</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#ProcessDomain"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryRequirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#executionOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>execution of</rdfs:label>
+    <skos:definition>SOP execution is execution of SOP template</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#SOPExecution"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#SOPTemplate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#mappedFrom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>mapped from</rdfs:label>
+    <skos:definition>ISO control is mapped from exemplar control</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#ISOControl"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#ExemplarControl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#validatesComplianceWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>validates compliance with</rdfs:label>
+    <skos:definition>Control validates compliance with policy</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#ExemplarControl"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#PolicyDomain"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#validatedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#forAIModel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>for AI model</rdfs:label>
+    <skos:definition>Work product for specific AI model</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#WorkProduct"/>
+    <rdfs:range rdf:resource="http://asherinformatics.com/ontology/ashmatics/AImodel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#WorkProduct">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Work Product</rdfs:label>
+    <skos:definition>Customer work product instance derived from template</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#SOPExecution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>SOP Execution</rdfs:label>
+    <skos:definition>Record of SOP execution with date and executor</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Deviceclass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Device class</rdfs:label>
+    <skos:definition>The classification of the device according to US FDA regulatory standards</skos:definition>
+    <ash:classId>ASH0001007</ash:classId>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9104"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#specifies">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>specifies</rdfs:label>
+    <skos:definition>Policy domain specifies process domain requirements</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#PolicyDomain"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#ProcessDomain"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#specifiedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/source_of">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:label>source_of</rdfs:label>
+    <skos:definition>A relationship indicating that one entity is the origin or source of another entity.</skos:definition>
+    <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/derives_from"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#BasePractice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Base Practice</rdfs:label>
+    <skos:definition>Fundamental practice within a process domain with defined duration and sequence</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Step"/>
+    <rdfs:subClassOf rdf:nodeID="Nae413ff5a9284263923dbc6c0a5e6df1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/CEmarked">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>CE marked</rdfs:label>
+    <skos:definition>Model performance: CE-Marked</skos:definition>
+    <ash:classId>ASH0002011</ash:classId>
+    <skos:altLabel>CE-marked</skos:altLabel>
+    <skos:altLabel>European approved</skos:altLabel>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9103"/>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/Regulatorystatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#SOPTemplate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>SOP Template</rdfs:label>
+    <skos:definition>Standard Operating Procedure template that realizes a base practice</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Step"/>
+    <rdfs:subClassOf rdf:nodeID="N412a6ca894fd47b398852e8471bd010a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/2Dimages">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>2D images</rdfs:label>
+    <skos:definition>Input data type: 2D Images</skos:definition>
+    <ash:classId>ASH0003010</ash:classId>
+    <skos:altLabel>2D image</skos:altLabel>
+    <skos:altLabel>Two-dimensional images</skos:altLabel>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9102"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T017">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>AnatomicStructure</rdfs:label>
+    <skos:definition>Body structure or anatomical region</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#PolicyTemplate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Policy Template</rdfs:label>
+    <skos:definition>Tokenized policy document template</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#hasSubRequirement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>has sub-requirement</rdfs:label>
+    <skos:definition>Requirement has sub-requirement</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryRequirement"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryRequirement"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#parentRequirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Screening">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Screening</rdfs:label>
+    <skos:definition>Clinical application: Screening</skos:definition>
+    <ash:classId>ASH0004002</ash:classId>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9105"/>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/Clinicalapplication"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N22b18ea8c2f8498f98466e5e413597c5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://ashmatics.com/ontology/cai#containsBasePractice"/>
+    <owl:someValuesFrom rdf:resource="https://ashmatics.com/ontology/cai#BasePractice"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#Bundle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>prov:Bundle</rdfs:label>
+    <rdfs:comment>W3C PROV-O Bundle</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#excludes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>excludes</rdfs:label>
+    <skos:definition>AIMS excludes a policy domain</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#AIManagementSystem"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#PolicyDomain"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#RegulatoryCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Regulatory Category</rdfs:label>
+    <skos:definition>Category of requirements within a function</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#relatedTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:label>related to</rdfs:label>
+    <skos:definition>Cross-framework alignment relationship</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryRequirement"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryRequirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#partOfFunction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>part of function</rdfs:label>
+    <skos:definition>Category is part of function</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryCategory"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryFunction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#basedOn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>based on</rdfs:label>
+    <skos:definition>AIMS is based on governance framework</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#AIManagementSystem"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#GovernanceFramework"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Commercialstatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Commercial status</rdfs:label>
+    <skos:definition>The commercial status of an AI Application</skos:definition>
+    <ash:classId>ASH0001006</ash:classId>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9103"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#RegulatoryRequirement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Regulatory Requirement</rdfs:label>
+    <skos:definition>Specific requirement from a regulatory framework</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/AImodel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>AI model</rdfs:label>
+    <skos:definition>The actual trained algorithm/neural network</skos:definition>
+    <ash:classId>ASH0001005</ash:classId>
+    <skos:altLabel>Neural Network</skos:altLabel>
+    <skos:altLabel>Algorithm</skos:altLabel>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9101"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#coversProducts">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>covers products</rdfs:label>
+    <skos:definition>AIMS covers products/applications</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#AIManagementSystem"/>
+    <rdfs:range rdf:resource="http://asherinformatics.com/ontology/ashmatics/Product"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Detection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Detection</rdfs:label>
+    <skos:definition>Model type: Detection</skos:definition>
+    <ash:classId>ASH0003003</ash:classId>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9101"/>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/AImodel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#partOfAIMS">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>part of AIMS</rdfs:label>
+    <skos:definition>Instance is part of AI Management System</skos:definition>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#AIManagementSystem"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#contains"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9102">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>InputDataType</rdfs:label>
+    <skos:definition>Format or structure of data processed by AI models</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#ControlAssessment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Control Assessment</rdfs:label>
+    <skos:definition>Assessment of a control for a customer</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#implements">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>implements</rdfs:label>
+    <skos:definition>Control implements requirement</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#ExemplarControl"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryRequirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9003">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>SiteOfCare</rdfs:label>
+    <skos:definition>Healthcare environment context</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T093"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/applies_to">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>applies_to</rdfs:label>
+    <skos:definition>A relationship indicating that one entity is applicable to or relevant for another entity.</skos:definition>
+    <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/has_application"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Product">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Product</rdfs:label>
+    <skos:definition>A commercial offering in the medical imaging ecosystem</skos:definition>
+    <ash:classId>ASH0001001</ash:classId>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9106"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/related_to">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:label>related_to</rdfs:label>
+    <skos:definition>A general relationship indicating that two entities are connected or associated in some way.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9105">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>ClinicalApplication</rdfs:label>
+    <skos:definition>How the AI model is applied in clinical context</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9104">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>RegulatoryClassification</rdfs:label>
+    <skos:definition>Regulatory classification of medical device</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nae413ff5a9284263923dbc6c0a5e6df1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://ashmatics.com/ontology/cai#realizedBy"/>
+    <owl:someValuesFrom rdf:resource="https://ashmatics.com/ontology/cai#SOPTemplate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#integratesWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:label>integrates with</rdfs:label>
+    <skos:definition>Process domain integrates with another process domain</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#ProcessDomain"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#ProcessDomain"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#scopedToModality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>scoped to modality</rdfs:label>
+    <skos:definition>Policy document scoped to imaging modality</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#PolicyDocument"/>
+    <rdfs:range rdf:resource="http://asherinformatics.com/ontology/ashmatics/Imagingmodality"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#operationalizedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>operationalized in</rdfs:label>
+    <skos:definition>Requirement is operationalized in process domain</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryRequirement"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#ProcessDomain"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#operationalizes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#partOfFramework">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>part of framework</rdfs:label>
+    <skos:definition>Function is part of framework</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryFunction"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryFramework"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#ProcessDomain">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Process Domain</rdfs:label>
+    <skos:definition>Process domain containing base practices for a functional area</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Plan"/>
+    <rdfs:subClassOf rdf:nodeID="N22b18ea8c2f8498f98466e5e413597c5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#hasCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>has category</rdfs:label>
+    <skos:definition>Function has category</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryFunction"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryCategory"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#partOfFunction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/derives_from">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:label>derives_from</rdfs:label>
+    <skos:definition>A relationship indicating that one entity originates from or is based on another entity.</skos:definition>
+    <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/source_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/supported_by">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>supported_by</rdfs:label>
+    <skos:definition>A relationship indicating that one entity is supported or backed by evidence from another entity.</skos:definition>
+    <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/supports"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#belongsToProcessDomain">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>belongs to process domain</rdfs:label>
+    <skos:definition>Base practice belongs to process domain</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#BasePractice"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#ProcessDomain"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/p-plan#Step">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>p-plan:Step</rdfs:label>
+    <rdfs:comment>P-Plan Step</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/has_application">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -708,15 +807,212 @@
     <skos:definition>A relationship indicating that one entity has another entity as an application or use case.</skos:definition>
     <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/applies_to"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#servesAsEvidenceFor">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>servesAsEvidenceFor</rdfs:label>
-    <skos:definition>Serves as evidence for compliance</skos:definition>
-    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#evidencedBy"/>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#ExemplarControl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Exemplar Control</rdfs:label>
+    <skos:definition>AshMatics exemplar control that maps to ISO 42001</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:subClassOf rdf:nodeID="N7ab3e0ea989e4e41a98e7e72d7cb8eff"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#governsProduct">
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/FDAcleared">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>FDA cleared</rdfs:label>
+    <skos:definition>Model performance: FDA-Cleared</skos:definition>
+    <ash:classId>ASH0002010</ash:classId>
+    <skos:altLabel>FDA-cleared</skos:altLabel>
+    <skos:altLabel>FDA approved</skos:altLabel>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9103"/>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/Regulatorystatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#WorkProductTemplate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Work Product Template</rdfs:label>
+    <skos:definition>Template for work products produced by SOPs, serves as evidence</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9201">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>RelationshipType</rdfs:label>
+    <skos:definition>Type of relationship between two entities</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Diagnostic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Diagnostic</rdfs:label>
+    <skos:definition>Clinical application: Diagnostic</skos:definition>
+    <ash:classId>ASH0004001</ash:classId>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9105"/>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/Clinicalapplication"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T060">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>DiagnosticProcedure</rdfs:label>
+    <skos:definition>Procedures used to diagnose a disease or condition</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/has_part">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>governsProduct</rdfs:label>
-    <skos:definition>Governance domain governs a product</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:label>has_part</rdfs:label>
+    <skos:definition>A relationship indicating that one entity contains or includes another entity as a component or part.</skos:definition>
+    <owl:inverseOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/Classification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Classification</rdfs:label>
+    <skos:definition>Model type: Classification</skos:definition>
+    <ash:classId>ASH0003001</ash:classId>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9101"/>
+    <rdfs:subClassOf rdf:resource="http://asherinformatics.com/ontology/ashmatics/AImodel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9002">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>ClinicalSpecialty</rdfs:label>
+    <skos:definition>Medical specialty domains</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T061">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>TherapeuticOrPreventiveProcedure</rdfs:label>
+    <skos:definition>Treatment or prevention procedures</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#forAIApplication">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>for AI application</rdfs:label>
+    <skos:definition>Work product for specific AI application</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#WorkProduct"/>
+    <rdfs:range rdf:resource="http://asherinformatics.com/ontology/ashmatics/AIapplication"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#ProcessOutput">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Process Output</rdfs:label>
+    <skos:definition>Aggregated output composed from multiple work products</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#GovernanceFramework">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Governance Framework</rdfs:label>
+    <skos:definition>Top-level AshMatics CAI Framework definition with version and effective date</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Plan"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#referencesDocument">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>references document</rdfs:label>
+    <skos:definition>Work product references regulatory document</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#WorkProductTemplate"/>
+    <rdfs:range rdf:resource="http://asherinformatics.com/ontology/ashmatics/FDAGuidance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics-unified">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label>AshMatics Unified Ontology</rdfs:label>
+    <rdfs:comment>ASH (Domain) + ASHCAI (Governance) - Clinical AI Governance Framework Ontology</rdfs:comment>
+    <owl:versionInfo>2.0.0</owl:versionInfo>
+    <dcterms:created>2026-01-19</dcterms:created>
+    <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#Tool">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Tool</rdfs:label>
+    <skos:definition>Tool required by an SOP for execution</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#addressedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>addressed by</rdfs:label>
+    <skos:definition>Regulatory requirement is addressed by policy domain</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryRequirement"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#PolicyDomain"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#addresses"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#Agent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>prov:Agent</rdfs:label>
+    <rdfs:comment>W3C PROV-O Agent</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#OverviewSummary">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Overview Summary</rdfs:label>
+    <skos:definition>Domain overview summary document</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#triggeredBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>triggered by</rdfs:label>
+    <skos:definition>Base practice is triggered by work product</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#BasePractice"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#WorkProductTemplate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#RegulatoryFramework">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Regulatory Framework</rdfs:label>
+    <skos:definition>External regulatory framework (NIST, ISO, URAC, etc.)</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#hasFunction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>has function</rdfs:label>
+    <skos:definition>Framework has function</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryFramework"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryFunction"/>
+    <owl:inverseOf rdf:resource="https://ashmatics.com/ontology/cai#partOfFramework"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://asherinformatics.com/ontology/ashmatics/SemanticType_T9101">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>AIModelType</rdfs:label>
+    <skos:definition>Category of AI algorithm or model</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#evidencedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>evidenced by</rdfs:label>
+    <skos:definition>Control is evidenced by work product</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#ExemplarControl"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#WorkProductTemplate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#addresses">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>addresses</rdfs:label>
+    <skos:definition>Policy domain addresses regulatory requirement</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#PolicyDomain"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#RegulatoryRequirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>skos:ConceptScheme</rdfs:label>
+    <rdfs:comment>SKOS Concept Scheme</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/p-plan#Variable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>p-plan:Variable</rdfs:label>
+    <rdfs:comment>P-Plan Variable</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#Activity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>prov:Activity</rdfs:label>
+    <rdfs:comment>W3C PROV-O Activity</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N412a6ca894fd47b398852e8471bd010a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://ashmatics.com/ontology/cai#produces"/>
+    <owl:someValuesFrom rdf:resource="https://ashmatics.com/ontology/cai#WorkProductTemplate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/p-plan#Plan">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>p-plan:Plan</rdfs:label>
+    <rdfs:comment>P-Plan Plan (extends prov:Plan)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Plan"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ashmatics.com/ontology/cai#realizes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>realizes</rdfs:label>
+    <skos:definition>SOP realizes a base practice</skos:definition>
+    <rdfs:domain rdf:resource="https://ashmatics.com/ontology/cai#SOPTemplate"/>
+    <rdfs:range rdf:resource="https://ashmatics.com/ontology/cai#BasePractice"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#Plan">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>prov:Plan</rdfs:label>
+    <rdfs:comment>W3C PROV-O Plan</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>
