@@ -1,12 +1,8 @@
 {
   "@context": {
     "@version": 1.1,
-    
-    "_comment": "AshMatics Unified Ontology: ASH (Domain) + ASHCAI (Governance) v1.0.0",
-
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "owl": "http://www.w3.org/2002/07/owl#",
-
     "ash": "http://asherinformatics.com/ontology/ashmatics/",
     "ashcai": "https://ashmatics.com/ontology/cai#",
     "prov": "http://www.w3.org/ns/prov#",
@@ -15,14 +11,12 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "dcterms": "http://purl.org/dc/terms/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    
     "label": "skos:prefLabel",
     "altLabel": "skos:altLabel",
     "definition": "skos:definition",
     "description": "dcterms:description",
     "version": "dcterms:hasVersion",
     "status": "ash:status",
-    
     "Product": "ash:Product",
     "AIApplication": "ash:AIApplication",
     "AIModel": "ash:AIModel",
@@ -37,21 +31,58 @@
     "Standard": "ash:Standard",
     "ResearchPaper": "ash:ResearchPaper",
     "PracticeGuideline": "ash:PracticeGuideline",
-    
-    "is_a": {"@id": "ash:is_a", "@type": "@id"},
-    "has_subtype": {"@id": "ash:has_subtype", "@type": "@id"},
-    "has_part": {"@id": "ash:has_part", "@type": "@id"},
-    "part_of": {"@id": "ash:part_of", "@type": "@id"},
-    "related_to": {"@id": "ash:related_to", "@type": "@id"},
-    "equivalent_to": {"@id": "ash:equivalent_to", "@type": "@id"},
-    "supports": {"@id": "ash:supports", "@type": "@id"},
-    "supported_by": {"@id": "ash:supported_by", "@type": "@id"},
-    "contradicts": {"@id": "ash:contradicts", "@type": "@id"},
-    "derives_from": {"@id": "ash:derives_from", "@type": "@id"},
-    "source_of": {"@id": "ash:source_of", "@type": "@id"},
-    "ash_applies_to": {"@id": "ash:applies_to", "@type": "@id"},
-    "ash_has_application": {"@id": "ash:has_application", "@type": "@id"},
-    
+    "is_a": {
+      "@id": "ash:is_a",
+      "@type": "@id"
+    },
+    "has_subtype": {
+      "@id": "ash:has_subtype",
+      "@type": "@id"
+    },
+    "has_part": {
+      "@id": "ash:has_part",
+      "@type": "@id"
+    },
+    "part_of": {
+      "@id": "ash:part_of",
+      "@type": "@id"
+    },
+    "related_to": {
+      "@id": "ash:related_to",
+      "@type": "@id"
+    },
+    "equivalent_to": {
+      "@id": "ash:equivalent_to",
+      "@type": "@id"
+    },
+    "supports": {
+      "@id": "ash:supports",
+      "@type": "@id"
+    },
+    "supported_by": {
+      "@id": "ash:supported_by",
+      "@type": "@id"
+    },
+    "contradicts": {
+      "@id": "ash:contradicts",
+      "@type": "@id"
+    },
+    "derives_from": {
+      "@id": "ash:derives_from",
+      "@type": "@id"
+    },
+    "source_of": {
+      "@id": "ash:source_of",
+      "@type": "@id"
+    },
+    "ash_applies_to": {
+      "@id": "ash:applies_to",
+      "@type": "@id"
+    },
+    "ash_has_application": {
+      "@id": "ash:has_application",
+      "@type": "@id"
+    },
     "GovernanceFramework": "ashcai:GovernanceFramework",
     "PolicyDomain": "ashcai:PolicyDomain",
     "ProcessDomain": "ashcai:ProcessDomain",
@@ -75,74 +106,265 @@
     "WorkProduct": "ashcai:WorkProduct",
     "ControlAssessment": "ashcai:ControlAssessment",
     "AuditEvidence": "ashcai:AuditEvidence",
-    
-    "specifies": {"@id": "ashcai:specifies", "@type": "@id"},
-    "specifiedBy": {"@id": "ashcai:specifiedBy", "@type": "@id"},
-    "containsBasePractice": {"@id": "ashcai:containsBasePractice", "@type": "@id"},
-    "belongsToProcessDomain": {"@id": "ashcai:belongsToProcessDomain", "@type": "@id"},
-    "realizedBy": {"@id": "ashcai:realizedBy", "@type": "@id"},
-    "realizes": {"@id": "ashcai:realizes", "@type": "@id"},
-    "produces": {"@id": "ashcai:produces", "@type": "@id"},
-    "producedBy": {"@id": "ashcai:producedBy", "@type": "@id"},
-    "requires": {"@id": "ashcai:requires", "@type": "@id"},
-    "requiredBy": {"@id": "ashcai:requiredBy", "@type": "@id"},
-    "composedInto": {"@id": "ashcai:composedInto", "@type": "@id"},
-    "composedFrom": {"@id": "ashcai:composedFrom", "@type": "@id"},
-    "servesAsEvidenceFor": {"@id": "ashcai:servesAsEvidenceFor", "@type": "@id"},
-    "evidencedBy": {"@id": "ashcai:evidencedBy", "@type": "@id"},
-    "mapsToISO": {"@id": "ashcai:mapsToISO", "@type": "@id"},
-    "mappedFrom": {"@id": "ashcai:mappedFrom", "@type": "@id"},
-    "validatesComplianceWith": {"@id": "ashcai:validatesComplianceWith", "@type": "@id"},
-    "validatedBy": {"@id": "ashcai:validatedBy", "@type": "@id"},
-    "integratesWith": {"@id": "ashcai:integratesWith", "@type": "@id"},
-    "triggersActivity": {"@id": "ashcai:triggersActivity", "@type": "@id"},
-    "triggeredBy": {"@id": "ashcai:triggeredBy", "@type": "@id"},
-    "hasOverviewSummary": {"@id": "ashcai:hasOverviewSummary", "@type": "@id"},
-    "summarizes": {"@id": "ashcai:summarizes", "@type": "@id"},
-    "hasTemplate": {"@id": "ashcai:hasTemplate", "@type": "@id"},
-    "templateFor": {"@id": "ashcai:templateFor", "@type": "@id"},
-    
-    "addressedBy": {"@id": "ashcai:addressedBy", "@type": "@id"},
-    "addresses": {"@id": "ashcai:addresses", "@type": "@id"},
-    "implementedThrough": {"@id": "ashcai:implementedThrough", "@type": "@id"},
-    "implements": {"@id": "ashcai:implements", "@type": "@id"},
-    "operationalizedIn": {"@id": "ashcai:operationalizedIn", "@type": "@id"},
-    "operationalizes": {"@id": "ashcai:operationalizes", "@type": "@id"},
-    "ashcai_relatedTo": {"@id": "ashcai:relatedTo", "@type": "@id"},
-    "hasFunction": {"@id": "ashcai:hasFunction", "@type": "@id"},
-    "partOfFramework": {"@id": "ashcai:partOfFramework", "@type": "@id"},
-    "hasCategory": {"@id": "ashcai:hasCategory", "@type": "@id"},
-    "partOfFunction": {"@id": "ashcai:partOfFunction", "@type": "@id"},
-    "hasRequirement": {"@id": "ashcai:hasRequirement", "@type": "@id"},
-    "partOfCategory": {"@id": "ashcai:partOfCategory", "@type": "@id"},
-    "hasSubRequirement": {"@id": "ashcai:hasSubRequirement", "@type": "@id"},
-    "parentRequirement": {"@id": "ashcai:parentRequirement", "@type": "@id"},
-    
-    "instantiatedFrom": {"@id": "ashcai:instantiatedFrom", "@type": "@id"},
-    "hasInstance": {"@id": "ashcai:hasInstance", "@type": "@id"},
-    "partOfAIMS": {"@id": "ashcai:partOfAIMS", "@type": "@id"},
-    "contains": {"@id": "ashcai:contains", "@type": "@id"},
-    "executionOf": {"@id": "ashcai:executionOf", "@type": "@id"},
-    "basedOn": {"@id": "ashcai:basedOn", "@type": "@id"},
-    "excludes": {"@id": "ashcai:excludes", "@type": "@id"},
-    "extends": {"@id": "ashcai:extends", "@type": "@id"},
-    "derivedInto": {"@id": "ashcai:derivedInto", "@type": "@id"},
-    "ashcai_derivedFrom": {"@id": "ashcai:derivedFrom", "@type": "@id"},
-    "assesses": {"@id": "ashcai:assesses", "@type": "@id"},
-    "supportedByEvidence": {"@id": "ashcai:supportedByEvidence", "@type": "@id"},
-    "supportsAssessment": {"@id": "ashcai:supportsAssessment", "@type": "@id"},
-    
-    "governsProduct": {"@id": "ashcai:governsProduct", "@type": "@id", "_comment": "BRIDGE: PolicyDomain → ash:Product/AIApplication"},
-    "governedBy": {"@id": "ash:governedBy", "@type": "@id", "_comment": "BRIDGE inverse: ash:Product → ashcai:PolicyDomain"},
-    "appliesTo": {"@id": "ashcai:appliesTo", "@type": "@id", "_comment": "BRIDGE: ExemplarControl/Requirement → ash:AIApplication"},
-    "hasGovernanceRequirement": {"@id": "ash:hasGovernanceRequirement", "@type": "@id", "_comment": "BRIDGE inverse: ash:AIApplication → ashcai:Requirement"},
-    "scopedToModality": {"@id": "ashcai:scopedToModality", "@type": "@id", "_comment": "BRIDGE: PolicyDocument → ash:ImagingModality"},
-    "scopedToDeviceClass": {"@id": "ashcai:scopedToDeviceClass", "@type": "@id", "_comment": "BRIDGE: PolicyDocument → ash:DeviceClass"},
-    "scopedToProducts": {"@id": "ashcai:scopedToProducts", "@type": "@id", "_comment": "BRIDGE: PolicyDocument → ash:Product"},
-    "coversProducts": {"@id": "ashcai:coversProducts", "@type": "@id", "_comment": "BRIDGE: AIMS → ash:Product/AIApplication"},
-    "referencesDocument": {"@id": "ashcai:referencesDocument", "@type": "@id", "_comment": "BRIDGE: WorkProduct → ash:FDAGuidance/Law/Standard"},
-    "referencedByWorkProduct": {"@id": "ash:referencedByWorkProduct", "@type": "@id", "_comment": "BRIDGE inverse: ash:Document → ashcai:WorkProduct"},
-    "forAIApplication": {"@id": "ashcai:forAIApplication", "@type": "@id", "_comment": "BRIDGE: WorkProduct/Assessment → ash:AIApplication"},
-    "forAIModel": {"@id": "ashcai:forAIModel", "@type": "@id", "_comment": "BRIDGE: WorkProduct → ash:AIModel"}
+    "specifies": {
+      "@id": "ashcai:specifies",
+      "@type": "@id"
+    },
+    "specifiedBy": {
+      "@id": "ashcai:specifiedBy",
+      "@type": "@id"
+    },
+    "containsBasePractice": {
+      "@id": "ashcai:containsBasePractice",
+      "@type": "@id"
+    },
+    "belongsToProcessDomain": {
+      "@id": "ashcai:belongsToProcessDomain",
+      "@type": "@id"
+    },
+    "realizedBy": {
+      "@id": "ashcai:realizedBy",
+      "@type": "@id"
+    },
+    "realizes": {
+      "@id": "ashcai:realizes",
+      "@type": "@id"
+    },
+    "produces": {
+      "@id": "ashcai:produces",
+      "@type": "@id"
+    },
+    "producedBy": {
+      "@id": "ashcai:producedBy",
+      "@type": "@id"
+    },
+    "requires": {
+      "@id": "ashcai:requires",
+      "@type": "@id"
+    },
+    "requiredBy": {
+      "@id": "ashcai:requiredBy",
+      "@type": "@id"
+    },
+    "composedInto": {
+      "@id": "ashcai:composedInto",
+      "@type": "@id"
+    },
+    "composedFrom": {
+      "@id": "ashcai:composedFrom",
+      "@type": "@id"
+    },
+    "servesAsEvidenceFor": {
+      "@id": "ashcai:servesAsEvidenceFor",
+      "@type": "@id"
+    },
+    "evidencedBy": {
+      "@id": "ashcai:evidencedBy",
+      "@type": "@id"
+    },
+    "mapsToISO": {
+      "@id": "ashcai:mapsToISO",
+      "@type": "@id"
+    },
+    "mappedFrom": {
+      "@id": "ashcai:mappedFrom",
+      "@type": "@id"
+    },
+    "validatesComplianceWith": {
+      "@id": "ashcai:validatesComplianceWith",
+      "@type": "@id"
+    },
+    "validatedBy": {
+      "@id": "ashcai:validatedBy",
+      "@type": "@id"
+    },
+    "integratesWith": {
+      "@id": "ashcai:integratesWith",
+      "@type": "@id"
+    },
+    "triggersActivity": {
+      "@id": "ashcai:triggersActivity",
+      "@type": "@id"
+    },
+    "triggeredBy": {
+      "@id": "ashcai:triggeredBy",
+      "@type": "@id"
+    },
+    "hasOverviewSummary": {
+      "@id": "ashcai:hasOverviewSummary",
+      "@type": "@id"
+    },
+    "summarizes": {
+      "@id": "ashcai:summarizes",
+      "@type": "@id"
+    },
+    "hasTemplate": {
+      "@id": "ashcai:hasTemplate",
+      "@type": "@id"
+    },
+    "templateFor": {
+      "@id": "ashcai:templateFor",
+      "@type": "@id"
+    },
+    "addressedBy": {
+      "@id": "ashcai:addressedBy",
+      "@type": "@id"
+    },
+    "addresses": {
+      "@id": "ashcai:addresses",
+      "@type": "@id"
+    },
+    "implementedThrough": {
+      "@id": "ashcai:implementedThrough",
+      "@type": "@id"
+    },
+    "implements": {
+      "@id": "ashcai:implements",
+      "@type": "@id"
+    },
+    "operationalizedIn": {
+      "@id": "ashcai:operationalizedIn",
+      "@type": "@id"
+    },
+    "operationalizes": {
+      "@id": "ashcai:operationalizes",
+      "@type": "@id"
+    },
+    "ashcai_relatedTo": {
+      "@id": "ashcai:relatedTo",
+      "@type": "@id"
+    },
+    "hasFunction": {
+      "@id": "ashcai:hasFunction",
+      "@type": "@id"
+    },
+    "partOfFramework": {
+      "@id": "ashcai:partOfFramework",
+      "@type": "@id"
+    },
+    "hasCategory": {
+      "@id": "ashcai:hasCategory",
+      "@type": "@id"
+    },
+    "partOfFunction": {
+      "@id": "ashcai:partOfFunction",
+      "@type": "@id"
+    },
+    "hasRequirement": {
+      "@id": "ashcai:hasRequirement",
+      "@type": "@id"
+    },
+    "partOfCategory": {
+      "@id": "ashcai:partOfCategory",
+      "@type": "@id"
+    },
+    "hasSubRequirement": {
+      "@id": "ashcai:hasSubRequirement",
+      "@type": "@id"
+    },
+    "parentRequirement": {
+      "@id": "ashcai:parentRequirement",
+      "@type": "@id"
+    },
+    "instantiatedFrom": {
+      "@id": "ashcai:instantiatedFrom",
+      "@type": "@id"
+    },
+    "hasInstance": {
+      "@id": "ashcai:hasInstance",
+      "@type": "@id"
+    },
+    "partOfAIMS": {
+      "@id": "ashcai:partOfAIMS",
+      "@type": "@id"
+    },
+    "contains": {
+      "@id": "ashcai:contains",
+      "@type": "@id"
+    },
+    "executionOf": {
+      "@id": "ashcai:executionOf",
+      "@type": "@id"
+    },
+    "basedOn": {
+      "@id": "ashcai:basedOn",
+      "@type": "@id"
+    },
+    "excludes": {
+      "@id": "ashcai:excludes",
+      "@type": "@id"
+    },
+    "extends": {
+      "@id": "ashcai:extends",
+      "@type": "@id"
+    },
+    "derivedInto": {
+      "@id": "ashcai:derivedInto",
+      "@type": "@id"
+    },
+    "ashcai_derivedFrom": {
+      "@id": "ashcai:derivedFrom",
+      "@type": "@id"
+    },
+    "assesses": {
+      "@id": "ashcai:assesses",
+      "@type": "@id"
+    },
+    "supportedByEvidence": {
+      "@id": "ashcai:supportedByEvidence",
+      "@type": "@id"
+    },
+    "supportsAssessment": {
+      "@id": "ashcai:supportsAssessment",
+      "@type": "@id"
+    },
+    "governsProduct": {
+      "@id": "ashcai:governsProduct",
+      "@type": "@id"
+    },
+    "governedBy": {
+      "@id": "ash:governedBy",
+      "@type": "@id"
+    },
+    "appliesTo": {
+      "@id": "ashcai:appliesTo",
+      "@type": "@id"
+    },
+    "hasGovernanceRequirement": {
+      "@id": "ash:hasGovernanceRequirement",
+      "@type": "@id"
+    },
+    "scopedToModality": {
+      "@id": "ashcai:scopedToModality",
+      "@type": "@id"
+    },
+    "scopedToDeviceClass": {
+      "@id": "ashcai:scopedToDeviceClass",
+      "@type": "@id"
+    },
+    "scopedToProducts": {
+      "@id": "ashcai:scopedToProducts",
+      "@type": "@id"
+    },
+    "coversProducts": {
+      "@id": "ashcai:coversProducts",
+      "@type": "@id"
+    },
+    "referencesDocument": {
+      "@id": "ashcai:referencesDocument",
+      "@type": "@id"
+    },
+    "referencedByWorkProduct": {
+      "@id": "ash:referencedByWorkProduct",
+      "@type": "@id"
+    },
+    "forAIApplication": {
+      "@id": "ashcai:forAIApplication",
+      "@type": "@id"
+    },
+    "forAIModel": {
+      "@id": "ashcai:forAIModel",
+      "@type": "@id"
+    }
   }
 }
